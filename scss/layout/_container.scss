@@ -5,15 +5,15 @@
     padding-right: 15px;
 
     // Adjust container width according to screen size.
-    @include mq(small) {
+    @include mq_min(small) {
         width: $cont-width-sm;
     }
 
-    @include mq(medium) {
+    @include mq_min(medium) {
         width: $cont-width-md;
     }
 
-    @include mq(large) {
+    @include mq_min(large) {
         width: $cont-width-lg;
     }
 }

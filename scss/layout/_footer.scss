@@ -1,7 +1,21 @@
+// ======================================
+//  Footer
+// ======================================
+
 footer {
     font-size: .8125rem;
     color: white;
     background-color: #323544;
+    padding: 27px 0 0;
+    position: relative;
+
+    // Make footer h4s uppercase.
+    h4 {
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 26px;
+    }
 
     // Make footer links white and remove underline.
     a {
@@ -10,33 +24,93 @@ footer {
     }
 }
 
-.footer-license {
+.footer_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer_company-wrapper {
+    width: auto;
+
+    h4 {
+        margin-top: 20px;
+    }
+}
+
+.footer_company-logo {
+    width: 250px;
+
+    img {
+        width: 100%;
+    }
+
+    // Increase image size to 320px on screens at least 480px wide.
+    @include mq_min(x-small) {
+        width: 320px;
+    }
+}
+
+.footer_company-social-media {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    // Style social media icons to look like buttons.
+    a {
+        text-align: center;
+        text-decoration: none;
+        font-size: 26px;
+        line-height: 26px;
+        padding: 12px 22px 16px;
+        background-color: #212330;
+        margin-right: 7px;
+
+        // Include right and bottom margin on screens up to 1259px wide.
+        @include mq_max(large) {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        // Make width of social media buttons 35% on screens up to 480px wide.
+        @include mq_max(x-small) {
+            width: 35%;
+        }
+    }
+}
+
+// ======================================
+//  Footer License
+// ======================================
+
+.footer_license-wrapper {
     background-color: #212330;
     padding-top: 10px;
 }
 
-.license {
+.footer_license {
     display: flex;
     flex-direction: column;
     padding: 5px 0 10px;
 
     br {
         // Hide break on screens at least 768px wide.
-        @include mq(small) {
+        @include mq_min(small) {
             display: none!important;
         }
     }
 
-    // Put license text on same line on screens at least 768px wide.
-    @include mq(small) {
+    // Put license text on single line on screens at least 768px wide.
+    @include mq_min(small) {
         flex-direction: row;
     }
 }
 
-.sitemap {
+.footer_license-sitemap {
 
     // Add hypthen before sitemap text on screens at least 768px wide.
-    @include mq(small) {
+    @include mq_min(small) {
 
         margin-left: 10px;
 

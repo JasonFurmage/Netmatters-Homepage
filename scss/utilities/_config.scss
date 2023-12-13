@@ -1,9 +1,14 @@
 // Media Query Breakpoints
 
-$brkpoint-xs : '(min-width: 480px)';
-$brkpoint-sm : '(min-width: 768px)';
-$brkpoint-md : '(min-width: 992px)';
-$brkpoint-lg : '(min-width: 1260px)';
+$brkpoint-min-xs : '(min-width: 480px)';
+$brkpoint-min-sm : '(min-width: 768px)';
+$brkpoint-min-md : '(min-width: 992px)';
+$brkpoint-min-lg : '(min-width: 1260px)';
+
+$brkpoint-max-xs : '(max-width: 480px)';
+$brkpoint-max-sm : '(max-width: 767px)';
+$brkpoint-max-md : '(max-width: 991px)';
+$brkpoint-max-lg : '(max-width: 1259px)';
 
 // Container Widths
 

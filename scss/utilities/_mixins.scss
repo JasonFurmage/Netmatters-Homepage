@@ -1,26 +1,52 @@
-// Simplify media queries.
-@mixin mq($break) {
-
+// Simplify min-width media queries.
+@mixin mq_min($break) {
     @if $break == "x-small" {
-        @media #{$brkpoint-xs} {
+        @media #{$brkpoint-min-xs} {
             @content;
         }
     }
 
     @else if $break == "small" {
-        @media #{$brkpoint-sm} {
+        @media #{$brkpoint-min-sm} {
             @content;
         }
     }
 
     @else if $break == "medium" {
-        @media #{$brkpoint-md} {
+        @media #{$brkpoint-min-md} {
             @content;
         }
     }
 
     @else if $break == "large" {
-        @media #{$brkpoint-lg} {
+        @media #{$brkpoint-min-lg} {
+            @content;
+        }
+    }
+}
+
+// Simplify max-width media queries.
+@mixin mq_max($break) {
+    @if $break == "x-small" {
+        @media #{$brkpoint-max-xs} {
+            @content;
+        }
+    }
+
+    @else if $break == "small" {
+        @media #{$brkpoint-max-sm} {
+            @content;
+        }
+    }
+
+    @else if $break == "medium" {
+        @media #{$brkpoint-max-md} {
+            @content;
+        }
+    }
+
+    @else if $break == "large" {
+        @media #{$brkpoint-max-lg} {
             @content;
         }
     }
