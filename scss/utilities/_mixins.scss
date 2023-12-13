@@ -1,0 +1,27 @@
+// Simplify media queries.
+@mixin mq($break) {
+
+    @if $break == "x-small" {
+        @media #{$brkpoint-xs} {
+            @content;
+        }
+    }
+
+    @else if $break == "small" {
+        @media #{$brkpoint-sm} {
+            @content;
+        }
+    }
+
+    @else if $break == "medium" {
+        @media #{$brkpoint-md} {
+            @content;
+        }
+    }
+
+    @else if $break == "large" {
+        @media #{$brkpoint-lg} {
+            @content;
+        }
+    }
+}

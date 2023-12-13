@@ -380,8 +380,90 @@ template {
 body {
   font-family: Poppins,sans-serif;
   font-size: 1rem;
+  line-height: 1.42857143;
   letter-spacing: .4px;
   color: #666;
+}
+
+/* line 1, ../../../GitHub/Netmatters-Homepage/scss/layout/_container.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  /* line 1, ../../../GitHub/Netmatters-Homepage/scss/layout/_container.scss */
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 1, ../../../GitHub/Netmatters-Homepage/scss/layout/_container.scss */
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1260px) {
+  /* line 1, ../../../GitHub/Netmatters-Homepage/scss/layout/_container.scss */
+  .container {
+    width: 1200px;
+  }
+}
+
+/* line 1, ../../../GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+footer {
+  font-size: .8125rem;
+  color: white;
+  background-color: #323544;
+}
+
+/* line 7, ../../../GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 13, ../../../GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+.footer-license {
+  background-color: #212330;
+  padding-top: 10px;
+}
+
+/* line 18, ../../../GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+.license {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0 10px;
+}
+
+@media (min-width: 768px) {
+  /* line 23, ../../../GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+  .license br {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 18, ../../../GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+  .license {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 36, ../../../GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+  .sitemap {
+    margin-left: 10px;
+  }
+  /* line 43, ../../../GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+  .sitemap ::before {
+    content: "-";
+    margin-right: 5px;
+  }
 }
 
 /*# sourceMappingURL=application.css.map */

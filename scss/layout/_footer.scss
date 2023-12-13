@@ -1,0 +1,48 @@
+footer {
+    font-size: .8125rem;
+    color: white;
+    background-color: #323544;
+
+    // Make footer links white and remove underline.
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.footer-license {
+    background-color: #212330;
+    padding-top: 10px;
+}
+
+.license {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0 10px;
+
+    br {
+        // Hide break on screens at least 768px wide.
+        @include mq(small) {
+            display: none!important;
+        }
+    }
+
+    // Put license text on same line on screens at least 768px wide.
+    @include mq(small) {
+        flex-direction: row;
+    }
+}
+
+.sitemap {
+
+    // Add hypthen before sitemap text on screens at least 768px wide.
+    @include mq(small) {
+
+        margin-left: 10px;
+
+        ::before {
+            content: "-";
+            margin-right: 5px;
+        }
+    }
+}
