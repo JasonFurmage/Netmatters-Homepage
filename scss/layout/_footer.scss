@@ -17,10 +17,22 @@ footer {
         margin-bottom: 26px;
     }
 
-    // Make footer links white and remove underline.
+    // Remove bullet points from unordered lists.
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        line-height: 1.375rem;
+    }
+
+    // Make footer links white and remove underline (unless in hover state).
     a {
         color: white;
         text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -30,11 +42,15 @@ footer {
     flex-wrap: wrap;
 }
 
-.footer_company-wrapper {
-    width: auto;
-
+.footer_company {
+    
     h4 {
         margin-top: 20px;
+    }
+
+    // Create gap between company and links section when screen is at least 1260px wide.
+    @include mq_min(large) {
+        width: 400px;
     }
 }
 
@@ -53,7 +69,6 @@ footer {
 
 .footer_company-social-media {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 30px;
 
@@ -77,6 +92,52 @@ footer {
         @include mq_max(x-small) {
             width: 35%;
         }
+
+        // Add colors to social media buttons.
+        &:nth-child(1):hover { background-color: #3b5998; }
+        &:nth-child(2):hover { background-color: #0077b5; }
+        &:nth-child(3):hover { background-color: #00aced; }
+        &:nth-child(4):hover { background-color: #d93175; }
+    }
+}
+
+// Center social media icons.
+.footer_company-social-media-icons {
+    position: relative;
+    top: 4px;
+}
+
+.footer_links {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    // Wrap link menus to a new line on screens up to 991px wide.
+    @include mq_max(medium) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    // Make footer links section fill free space on screens at least 768px wide.
+    @include mq_min(small) {
+        flex-grow: 1;
+        display: flex;
+    }
+}
+
+.footer_links-menu {
+    margin-bottom: 30px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    h4 {
+        margin-top: 0;
+        line-height: 1.1;
+    }
+
+    // Make each links menu take up 50% of width on screens at least 768px wide.
+    @include mq_min(small) {
+        width: 50%;
     }
 }
 
@@ -115,8 +176,13 @@ footer {
         margin-left: 10px;
 
         ::before {
-            content: "-";
+            content: "-\00a0";
             margin-right: 5px;
+
+            // Remove underline and pointer from hypthen.
+            cursor: default;
+            text-decoration: none;
+            display: inline-block;
         }
     }
 }
