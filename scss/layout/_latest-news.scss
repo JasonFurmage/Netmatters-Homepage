@@ -1,0 +1,175 @@
+.latest-news {
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+
+.latest-news_articles {
+    margin-top: -30px;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    display: flex;
+    flex-direction: column;
+
+    // Change articles to row on screens at least 768px wide.
+    @include mq_min(small) {
+        flex-direction: row;
+    }
+
+    a {
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    $colors: (#926fb1, #ce4125, #2ecc71);
+
+    // Use loop to set colors for each article.
+    .latest-news_article-wrapper {
+        @for $i from 1 through length($colors) {
+            &:nth-child(#{$i}) {
+
+                a {
+                    color: nth($colors, $i);
+                }
+
+                .button {
+                    font-weight: 400;
+                    color: $white;
+                    background-color: nth($colors, $i);
+                    border-color: nth($colors, $i);
+                }
+            }
+        }
+    }
+
+    // Hide last article on screens between 768 and 1259px wide.
+    @media (min-width: 768px) and (max-width: 1259px) {
+        .latest-news_article-wrapper:nth-child(3) {
+            display: none;
+        }
+    }
+}
+
+.latest-news_article-wrapper {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.latest-news_article {
+    position: relative;
+    margin-top: 30px;
+    top: 0;
+    transition: .5s ease;
+
+    // Move article up by 10px on hover.
+    &:hover {
+        top: -10px;
+        transition: .5s ease;
+    }
+
+    // Make entire article a link.
+    > a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+.article-image {
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.article-text {
+
+    padding: 30px;
+
+    // Give article rounded corners
+    border-top: 0;
+    border-radius: 0 0 3px 3px;
+    border: 1px solid $grey;
+
+    box-shadow: 0 3px 35px rgba(0,0,0,.1); // Add shadow.
+
+    h3 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        margin: 0 0 15px;
+    }
+
+    p {
+        line-height: 1.375rem;
+        font-size: .8125rem;
+        margin-bottom: 25px;
+    }
+}
+
+.article-read-time {
+    display: inline;
+    text-transform: uppercase;
+    color: rgba(51,54,69,.5);
+    font-size: .85rem;
+    vertical-align: middle;
+}
+
+.author {
+    font-size: .875rem;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid $grey;
+}
+
+.author-avatar {
+
+    display: table-cell;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        display: block;
+    }
+}
+
+.author-details {
+
+    display: table-cell;
+    padding-left: 20px;
+    line-height: 1.375rem;
+    vertical-align: middle;
+
+    strong {
+        color: $dark-grey;
+    }
+}
+
+.latest_view-all {
+
+    display: none!important; // Hide view all heading on bigger screens.
+    text-align: center;
+    margin-bottom: 20px;
+
+    h3 {
+        font-size: 1.625rem;
+        margin: 0 0 15px;
+        line-height: 1.1;
+    }
+
+    a {
+        text-decoration: none;
+        color: $dark-grey;
+    }
+
+    // Show view all heading on screens up to 767px wide.
+    @include mq_max(small) {
+        display: block!important;
+    }
+}

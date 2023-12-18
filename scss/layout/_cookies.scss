@@ -1,15 +1,15 @@
 .cookies_consent-button {
     position: fixed; // Position button outside of document flow.
 
-    line-height: 22px;
-    bottom: 0;
-    padding: 0 10px;
-    color: #fff;
-    background: #75788a;
-
     font-size: .8rem;
     font-weight: 600;
 
+    line-height: 22px;
+    bottom: 0;
+    padding: 0 10px;
+    color: $white;
+    background: #75788a;
+    
     border: solid #75788a;
     border-width: 1px 1px 0 0;
     border-top-right-radius: 10px; // Give top right of button a rounded corner.

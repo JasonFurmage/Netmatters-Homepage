@@ -1,0 +1,29 @@
+.clients {
+    padding-top: 50px;
+    padding-bottom: 50px
+}
+
+.clients-row {
+    display: flex;
+}
+
+.clients-item {
+    display: flex;
+    align-items: center;
+
+    // Add gap between client logos.
+    padding: 0 20px;
+    margin-right: 50px;
+
+    img {
+        max-height: 70px;
+        max-width: 200px;
+
+        filter: grayscale(1); // Make client logo black and white.
+
+        // Make client logos color when hovering.
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+}

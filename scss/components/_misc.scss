@@ -1,0 +1,7 @@
+// Add asterick after required fields.
+.required {
+    &:after {
+        content: " *";
+        color: #d24d57;
+    }
+}
