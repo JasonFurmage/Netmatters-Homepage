@@ -1,0 +1,41 @@
+.services {
+
+}
+
+.services-sections-wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.services-sections {
+    margin-top: 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.services-headings {
+    //position: relative;
+    //min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    display: flex;
+    justify-content: space-between; // Create space between headings.
+
+    h1 {
+        font-size: 2.7rem;
+        color: #333645;
+        margin: 0 0 28px;
+    }
+
+    a {
+        display: none;
+        font-size: 1.625rem;
+        color: #333645;
+        margin: 0 0 15px;
+
+        @include mq_min(small) {
+            display: block;
+        }
+    }
+}

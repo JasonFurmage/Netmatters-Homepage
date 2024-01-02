@@ -1,12 +1,35 @@
 .latest-news {
-    padding-top: 15px;
-    padding-bottom: 50px;
+    //padding-top: 15px;
+    //padding-bottom: 50px;
+}
+
+.latest-news_headings-wrapper {
+    display: flex;
+    justify-content: space-between; // Create space between latest news heading and view all heading.
+
+    padding-top: 50px;
+}
+
+.latest-news_heading {
+    h1 {
+        font-size: 2.25rem;
+        font-weight: 400;
+        margin: 0 0 28px;
+        color: #333645;
+    }
+}
+
+.latest-news-heading-hidden-xs {
+
 }
 
 .latest-news_articles {
     margin-top: -30px;
     margin-left: -15px;
     margin-right: -15px;
+
+    //padding-top: 15px;
+    padding-bottom: 50px; //Create gap betwen articles and view all heading.
 
     display: flex;
     flex-direction: column;
@@ -171,5 +194,27 @@
     // Show view all heading on screens up to 767px wide.
     @include mq_max(small) {
         display: block!important;
+    }
+}
+
+.latest_view-all2 {
+
+    text-align: center;
+    margin-bottom: 20px;
+
+    h3 {
+        font-size: 1.625rem;
+        margin: 0 0 15px;
+        line-height: 1.1;
+    }
+
+    a {
+        text-decoration: none;
+        color: $dark-grey;
+    }
+
+    // Hide view all heading on screens up to 767px wide.
+    @include mq_max(small) {
+        display: none!important;
     }
 }
