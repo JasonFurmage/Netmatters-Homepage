@@ -72,6 +72,11 @@
             margin-right: -4px;
         }
 
+        &:hover {
+            background-color: #121318;
+            border-color: #121318;
+        }
+
         // Set margin to 50px on small screens.
         @include mq_max(medium) {
             margin-bottom: 50px!important;
@@ -112,6 +117,22 @@
         i {
             margin-left: 8px;
             margin-right: -4px;
+        }
+
+        // Set background colour and highlight colour for google button.
+        &:first-child {
+            background-color: #4387f6;
+            &:hover {
+                background-color: #166af4;
+            }
+        }
+
+        // Set background colour and highlight colour for trustpilot button.
+        &:last-child {
+            background-color: #00b67b;
+            &:hover {
+                background-color: #009b69;
+            }
         }
     }
 }
