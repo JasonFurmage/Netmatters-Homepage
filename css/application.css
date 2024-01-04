@@ -1592,19 +1592,14 @@ footer a:hover {
   line-height: 62px;
 }
 
-/* line 1, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
-.banner {
-  position: relative;
-}
-
 /* line 5, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
 .banner-item {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #000;
   min-height: 550px;
+  background-color: #000;
 }
 
 @media (min-width: 992px) {
@@ -1621,32 +1616,31 @@ footer a:hover {
   }
 }
 
-/* line 22, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+/* line 24, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
 .banner-image-wrapper {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 4;
 }
 
-@media (max-width: 991px) {
-  /* line 22, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+@media (max-width: 992px) {
+  /* line 24, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
   .banner-image-wrapper {
     opacity: .5;
   }
 }
 
-/* line 35, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+/* line 38, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
 .banner-image-wrapper img {
-  object-fit: cover;
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 @media (min-width: 992px) {
-  /* line 42, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+  /* line 46, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
   .banner-image-wrapper::before {
     content: "";
     position: absolute;
@@ -1654,46 +1648,42 @@ footer a:hover {
     right: 0;
     top: 0;
     bottom: 0;
-    background: linear-gradient(270deg, transparent 25%, #000);
     z-index: 3;
+    background: linear-gradient(270deg, transparent 25%, #000);
   }
 }
 
-/* line 55, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+/* line 59, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
 .banner-content-wrapper {
-  position: relative;
-  z-index: 4;
-  padding: 3.75rem 0;
   color: #fff;
+  z-index: 4;
 }
 
-/* line 62, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+/* line 65, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
 .banner-content-wrapper h1 {
   font-size: 2.5rem;
   line-height: 3rem;
   margin: 0 0 1.25rem;
-  color: #fff;
-  font-weight: 600;
 }
 
 @media (min-width: 992px) {
-  /* line 62, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+  /* line 65, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
   .banner-content-wrapper h1 {
     font-size: 4rem;
     line-height: 5rem;
   }
 }
 
-/* line 75, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+/* line 77, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
 .banner-content-wrapper p {
-  margin-bottom: 0.375rem;
   font-size: 1.25rem;
-  line-height: 1.75rem;
   font-weight: 600;
+  line-height: 1.75rem;
+  margin-bottom: 0.375rem;
 }
 
 @media (min-width: 992px) {
-  /* line 75, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+  /* line 77, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
   .banner-content-wrapper p {
     font-size: 1.625rem;
     line-height: 2.5rem;
@@ -1701,33 +1691,31 @@ footer a:hover {
   }
 }
 
-/* line 88, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+/* line 91, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
 .banner-content-wrapper .button {
-  margin-top: 1.938rem;
-  margin-bottom: 1.125rem;
-  color: #fff;
+  font-size: 1.25rem;
   background-color: #926fb1;
   border-color: #926fb1;
-  height: auto;
   padding: 5px 20px;
-  font-size: 1.25rem;
+  margin-top: 1.938rem;
+  margin-bottom: 1.125rem;
 }
 
-/* line 98, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+/* line 102, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
 .banner-content-wrapper .button:hover {
   background-color: #7e57a0;
   border-color: #735093;
 }
 
-/* line 103, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+/* line 108, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
 .banner-content-wrapper .button i {
+  line-height: 50px;
   margin-right: -4px;
   margin-left: 9px;
-  line-height: 50px;
 }
 
 @media (max-width: 991px) {
-  /* line 55, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
+  /* line 59, ../../../GitHub/Netmatters-Homepage/scss/layout/_banner.scss */
   .banner-content-wrapper {
     text-align: center;
   }
@@ -1735,61 +1723,77 @@ footer a:hover {
 
 /* line 1, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
 .navigation {
-  background-color: #333645;
   position: relative;
+  background-color: #333645;
 }
 
 @media (max-width: 991px) {
   /* line 1, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
   .navigation {
-    display: none !important;
+    display: none;
   }
 }
 
 /* line 12, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.navigation-bar > ul {
   display: flex;
   flex-direction: row;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* line 21, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li {
+.navigation-item {
   flex: 1;
-  -webkit-flex: 1;
   text-align: center;
 }
 
-/* line 26, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:hover .navigation-submenu {
+/* line 25, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item > a {
+  position: relative;
+  display: block;
+  font-size: 1.125rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 19px 0 18px;
+}
+
+/* line 34, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item > a > small {
+  display: block;
+  font-size: .625rem;
+  padding-bottom: 1px;
+}
+
+/* line 42, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:hover .navigation-item-menu {
   display: block;
 }
 
-/* line 36, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(1) .navigation-icon {
+/* line 53, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(1) .navigation-item-icon {
   color: #67809f;
 }
 
-/* line 40, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(1) .navigation-submenu {
+/* line 54, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(1) .navigation-item-menu {
   background-color: #526781;
 }
 
-/* line 44, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(1):hover {
+/* line 57, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(1):hover {
   background-color: #67809f;
 }
 
-/* line 47, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(1):hover .navigation-icon {
+/* line 59, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(1):hover .navigation-item-icon {
   color: #fff;
 }
 
-/* line 51, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(1):hover > a:before {
+/* line 62, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(1):hover > a:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1803,28 +1807,28 @@ footer a:hover {
   border-width: 35px 83.5px 0;
 }
 
-/* line 36, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(2) .navigation-icon {
+/* line 53, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(2) .navigation-item-icon {
   color: #4183d7;
 }
 
-/* line 40, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(2) .navigation-submenu {
+/* line 54, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(2) .navigation-item-menu {
   background-color: #286abd;
 }
 
-/* line 44, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(2):hover {
+/* line 57, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(2):hover {
   background-color: #4183d7;
 }
 
-/* line 47, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(2):hover .navigation-icon {
+/* line 59, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(2):hover .navigation-item-icon {
   color: #fff;
 }
 
-/* line 51, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(2):hover > a:before {
+/* line 62, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(2):hover > a:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1838,28 +1842,28 @@ footer a:hover {
   border-width: 35px 83.5px 0;
 }
 
-/* line 36, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(3) .navigation-icon {
+/* line 53, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(3) .navigation-item-icon {
   color: #2ecc71;
 }
 
-/* line 40, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(3) .navigation-submenu {
+/* line 54, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(3) .navigation-item-menu {
   background-color: #25a25a;
 }
 
-/* line 44, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(3):hover {
+/* line 57, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(3):hover {
   background-color: #2ecc71;
 }
 
-/* line 47, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(3):hover .navigation-icon {
+/* line 59, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(3):hover .navigation-item-icon {
   color: #fff;
 }
 
-/* line 51, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(3):hover > a:before {
+/* line 62, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(3):hover > a:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1873,28 +1877,28 @@ footer a:hover {
   border-width: 35px 83.5px 0;
 }
 
-/* line 36, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(4) .navigation-icon {
+/* line 53, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(4) .navigation-item-icon {
   color: #d64541;
 }
 
-/* line 40, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(4) .navigation-submenu {
+/* line 54, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(4) .navigation-item-menu {
   background-color: #bc2c28;
 }
 
-/* line 44, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(4):hover {
+/* line 57, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(4):hover {
   background-color: #d64541;
 }
 
-/* line 47, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(4):hover .navigation-icon {
+/* line 59, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(4):hover .navigation-item-icon {
   color: #fff;
 }
 
-/* line 51, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(4):hover > a:before {
+/* line 62, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(4):hover > a:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1908,28 +1912,28 @@ footer a:hover {
   border-width: 35px 83.5px 0;
 }
 
-/* line 36, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(5) .navigation-icon {
+/* line 53, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(5) .navigation-item-icon {
   color: #926fb1;
 }
 
-/* line 40, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(5) .navigation-submenu {
+/* line 54, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(5) .navigation-item-menu {
   background-color: #79539a;
 }
 
-/* line 44, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(5):hover {
+/* line 57, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(5):hover {
   background-color: #926fb1;
 }
 
-/* line 47, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(5):hover .navigation-icon {
+/* line 59, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(5):hover .navigation-item-icon {
   color: #fff;
 }
 
-/* line 51, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(5):hover > a:before {
+/* line 62, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(5):hover > a:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1943,28 +1947,28 @@ footer a:hover {
   border-width: 35px 83.5px 0;
 }
 
-/* line 36, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(6) .navigation-icon {
+/* line 53, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(6) .navigation-item-icon {
   color: #f62459;
 }
 
-/* line 40, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(6) .navigation-submenu {
+/* line 54, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(6) .navigation-item-menu {
   background-color: #de093f;
 }
 
-/* line 44, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(6):hover {
+/* line 57, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(6):hover {
   background-color: #f62459;
 }
 
-/* line 47, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(6):hover .navigation-icon {
+/* line 59, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(6):hover .navigation-item-icon {
   color: #fff;
 }
 
-/* line 51, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(6):hover > a:before {
+/* line 62, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(6):hover > a:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1978,28 +1982,28 @@ footer a:hover {
   border-width: 35px 83.5px 0;
 }
 
-/* line 36, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(7) .navigation-icon {
+/* line 53, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(7) .navigation-item-icon {
   color: #ce4125;
 }
 
-/* line 40, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(7) .navigation-submenu {
+/* line 54, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(7) .navigation-item-menu {
   background-color: #a3331d;
 }
 
-/* line 44, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(7):hover {
+/* line 57, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(7):hover {
   background-color: #ce4125;
 }
 
-/* line 47, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(7):hover .navigation-icon {
+/* line 59, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(7):hover .navigation-item-icon {
   color: #fff;
 }
 
-/* line 51, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li:nth-child(7):hover > a:before {
+/* line 62, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item:nth-child(7):hover > a:before {
   content: "";
   position: absolute;
   left: 50%;
@@ -2013,102 +2017,79 @@ footer a:hover {
   border-width: 35px 83.5px 0;
 }
 
-/* line 68, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li > a {
-  position: relative;
+/* line 71, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item-icon {
   display: block;
-  color: #fff;
-  padding: 19px 0 18px;
-  text-transform: uppercase;
-  font-size: 1.125rem;
-  text-decoration: none;
-  line-height: 1;
-}
-
-/* line 78, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-menu > ul > li > a small {
-  display: block;
-  font-size: .625rem;
-  padding-bottom: 1px;
-}
-
-/* line 88, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-icon {
   font-size: 1.438rem;
-  display: block;
   padding-bottom: 10px;
 }
 
-/* line 94, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-submenu {
-  margin: 0;
-  display: none;
+/* line 77, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item-menu {
   position: absolute;
-  top: 100%;
-  left: 0;
+  display: none;
   min-width: 100%;
+  left: 0;
   z-index: 10;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-/* line 105, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-submenu .container {
+/* line 87, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-item-menu .container {
   padding: 0;
 }
 
-/* line 110, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-submenu-links {
+/* line 92, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-menu-links {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: -15px;
-  list-style: none;
   text-align: left;
+  list-style: none;
   padding: 0;
+  margin-top: -15px;
 }
 
-/* line 120, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+/* line 102, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-heading {
+  width: 100%;
+  color: #fff;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* line 108, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-heading > h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* line 116, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
 .navigation-link {
   width: 33%;
   margin-top: 15px;
 }
 
-/* line 124, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-link a {
+/* line 120, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+.navigation-link > a {
+  display: flex;
   color: #fff;
   font-size: 1.2rem;
   line-height: 1.313rem;
   padding: 0.625rem 0.938rem 0.625rem 0;
-  display: flex;
-  align-items: center;
 }
 
-/* line 134, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-link-heading {
-  width: 100%;
-  color: #fff !important;
-  margin-bottom: 10px;
-  margin-top: 15px;
-}
-
-/* line 140, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
-.navigation-link-heading h2 {
-  font-weight: 400;
-  margin: 0;
-  font-size: 2rem;
-  line-height: 1.1;
-}
-
-/* line 148, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+/* line 129, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
 .navigation-link-icon {
   display: flex;
-  justify-content: left;
   align-items: center;
   min-width: 25px;
 }
 
-/* line 155, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
+/* line 135, ../../../GitHub/Netmatters-Homepage/scss/layout/_navigation.scss */
 .navigation-link-text {
   margin-left: 10px;
 }

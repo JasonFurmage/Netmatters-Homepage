@@ -51,3 +51,16 @@
         }
     }
 }
+
+@mixin down_arrow($color) {
+    position: absolute;
+    left: 50%;
+    bottom: -35px;
+    transform: translateX(-50%);
+    z-index: 90;
+    width: 0;
+    height: 0;
+    border-color: $color transparent transparent;
+    border-style: solid;
+    border-width: 35px 83.5px 0;
+}

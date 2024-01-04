@@ -1,157 +1,137 @@
 .navigation {
+    position: relative; // Required for sub menu position.
     background-color: #333645;
-    position: relative;
 
+    // Only show navigation bar on medium+ sized screens.
     @include mq_max(medium) {
-        display: none!important;
+        display: none;
     }
 }
 
-.navigation-menu {
-
+.navigation-bar {
     > ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
         display: flex;
         flex-direction: row;
-
         list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
 
-        > li {
-            flex: 1;
-            -webkit-flex: 1;
-            text-align: center;
+.navigation-item {
+    flex: 1; // Make each navigation item take up eqaul space.
+    text-align: center;
 
-            &:hover .navigation-submenu {
-                display: block;
-            }
+    > a {
+        position: relative; // Required for down arrow position.
+        display: block;
+        font-size: 1.125rem;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $white;
+        padding: 19px 0 18px;
 
-            $colors: #67809f, #4183d7, #2ecc71, #d64541, #926fb1, #f62459, #ce4125;
-            $sub-colors: #526781, #286abd, #25a25a, #bc2c28, #79539a, #de093f, #a3331d;
+        > small {
+            display: block; // Make small text appear on new line.
+            font-size: .625rem;
+            padding-bottom: 1px;
+        }
+    }
 
-            @for $i from 1 through length($colors) {
-                &:nth-child(#{$i}) {
+    // Show navigation item sub menu on hover.
+    &:hover .navigation-item-menu {
+        display: block;
+    }
 
-                    .navigation-icon {
-                        color: nth($colors, $i);
-                    }
+    // Arrays for icon colors and sub menu colors.
+    $i-colors: #67809f, #4183d7, #2ecc71, #d64541, #926fb1, #f62459, #ce4125;
+    $m-colors: #526781, #286abd, #25a25a, #bc2c28, #79539a, #de093f, #a3331d;
 
-                    .navigation-submenu {
-                            background-color: nth($sub-colors, $i);
-                        }
+    // Loop for adding all the icon colors and sub menu colors to each navigation item.
+    @for $i from 1 through length($i-colors) {
+        &:nth-child(#{$i}) {
+            .navigation-item-icon {color: nth($i-colors, $i);}
+            .navigation-item-menu {background-color: nth($m-colors, $i);}
 
-                    &:hover {
-                        background-color: nth($colors, $i);
+            // Change colors on hover.
+            &:hover {
+                background-color: nth($i-colors, $i);
+                .navigation-item-icon {color: $white;}
 
-                        .navigation-icon {
-                            color: $white;
-                        }
-
-                        > a:before {
-                            content: "";
-                            position: absolute;
-                            left: 50%;
-                            bottom: -35px;
-                            transform: translateX(-50%);
-                            z-index: 90;
-                            width: 0;
-                            height: 0;
-                            border-color: nth($colors, $i) transparent transparent;
-                            border-style: solid;
-                            border-width: 35px 83.5px 0;
-                        }
-                    }
-                }
-            }
-
-            > a {
-                position: relative;
-                display: block;
-                color: #fff;
-                padding: 19px 0 18px;
-                text-transform: uppercase;
-                font-size: 1.125rem;
-                text-decoration: none;
-                line-height: 1;
-
-                small {
-                    display: block;
-                    font-size: .625rem;
-                    padding-bottom: 1px;
+                // Add down arrow beneath navigation item.
+                > a:before {
+                    content: "";
+                    @include down_arrow(nth($i-colors, $i));
                 }
             }
         }
     }
 }
 
-.navigation-icon {
-    font-size: 1.438rem;
+.navigation-item-icon {
     display: block;
+    font-size: 1.438rem;
     padding-bottom: 10px;
 }
 
-.navigation-submenu {
-    margin: 0;
-    display: none;
+.navigation-item-menu {
     position: absolute;
-    top: 100%;
-    left: 0;
+    display: none;
     min-width: 100%;
-    z-index: 10;
+    left: 0;
+    z-index: 10; // Appear in front of banner.
     padding-top: 50px;
     padding-bottom: 50px;
 
+    // Remove container padding.
     .container {
         padding: 0;
     }
 }
 
-.navigation-submenu-links {
+.navigation-menu-links {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: -15px;
-    list-style: none;
     text-align: left;
+    list-style: none;
     padding: 0;
+    margin-top: -15px;
 }
 
-.navigation-link {
-    width: 33%;
+.navigation-heading {
+    width: 100%; // Make heading fill first row.
+    color: $white;
     margin-top: 15px;
+    margin-bottom: 10px;
 
-    a {
-        color: #fff;
-        font-size: 1.2rem;
-        line-height: 1.313rem;
-        padding: 0.625rem 0.938rem 0.625rem 0;
-        display: flex;
-        align-items: center;
+    > h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.1;
+        margin: 0;
     }
 }
 
-.navigation-link-heading {
-    width: 100%;
-    color: #fff!important;
-    margin-bottom: 10px;
+.navigation-link {
+    width: 33%; // Shows 3 links per row.
     margin-top: 15px;
 
-    h2 {
-        font-weight: 400;
-        margin: 0;
-        font-size: 2rem;
-        line-height: 1.1;
+    > a {
+        display: flex; // Put icon and text on same line.
+        color: $white;
+        font-size: 1.2rem;
+        line-height: 1.313rem;
+        padding: 0.625rem 0.938rem 0.625rem 0;
     }
 }
 
 .navigation-link-icon {
     display: flex;
-    justify-content: left;
     align-items: center;
     min-width: 25px;
 }
 
 .navigation-link-text {
-    margin-left: 10px;
+    margin-left: 10px; // Add space between icon and text.
 }
