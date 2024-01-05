@@ -8,6 +8,7 @@
 }
 
 .clients-item {
+    position: relative;
     display: flex;
     align-items: center;
 
@@ -25,5 +26,102 @@
         &:hover {
             filter: grayscale(0);
         }
+    }
+
+    // Show client description on hover.
+    &:hover {
+        .item-description {
+            display: block;
+        }
+    }
+
+    // Set button colors and hover colors for description boxes.
+    &:nth-child(1) { .button { background-color: #926fb1; border-color: #926fb1; } .button:hover { background-color: #7e57a0; border-color: #735093; } }
+    &:nth-child(2) { .button { background-color: #926fb1; border-color: #926fb1; } .button:hover { background-color: #7e57a0; border-color: #735093; } }
+    &:nth-child(3) { .button { background-color: #2ecc71; border-color: #2ecc71; } .button:hover { background-color: #26ab5f; border-color: #239a55; } }
+    &:nth-child(6) { .button { background-color: #67809f; border-color: #67809f; } .button:hover { background-color: #566c88; border-color: #4e627b; } }
+    &:nth-child(10) { .button { background-color: #4183d7; border-color: #4183d7; } .button:hover { background-color: #2a6ec6; border-color: #2665b5; } }
+    &:nth-child(11) { .button { background-color: #2ecc71; border-color: #2ecc71; } .button:hover { background-color: #26ab5f; border-color: #239a55; } }
+    &:nth-child(13) { .button { background-color: #2ecc71; border-color: #2ecc71; } .button:hover { background-color: #26ab5f; border-color: #239a55; } }
+}
+
+.item-description {
+    display: none;
+
+    // Set size and position of description box.
+    position: absolute;
+    bottom: 100%;
+    left: -200px;
+    right: -200px;
+}
+
+.item-description-box {
+    text-align: center;
+    color: $white;
+    background-color: $dark-grey;
+    max-width: 280px;
+    padding: 20px;
+    margin: 0 auto 50px;
+
+    > h3 {
+        position: relative;
+        font-size: 1.125rem;
+        padding-bottom: 17px;
+        margin: 0;
+    }
+
+    > p {
+        font-size: .8125rem;
+        line-height: 1.375rem;
+        margin: 0 0 10px;
+
+        > a {
+            font-weight: 600; // Make link bold.
+
+            // Show underline on hover.
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    > a {
+        display: flex;
+        font-size: 16px;
+        margin-top: 11px;
+
+        // Add gap between text and icon.
+        > i {
+            line-height: 35px;
+            margin-left: 12px;
+            margin-right: -4px;
+        }
+    }
+}
+
+.no-description {
+    // Removing margin and padding on no description boxes.
+    h3 {
+        padding-bottom: 0!important;
+        margin-bottom: 0!important;
+    }
+
+    // Hide paragraph on no description boxes.
+    p {
+        display: none;
+    }
+}
+
+.item-arrow {
+    // Size and position arrow below item description.
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -36px;
+
+    // Draw arrow.
+    &:after {
+        content: "";
+        @include small_arrow;
     }
 }
