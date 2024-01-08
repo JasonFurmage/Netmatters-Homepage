@@ -9,3 +9,24 @@
     font-size: 1.063rem;
     border-radius: 3px;
 }
+
+.button_search {
+    height: 56px;
+    width: 63px;
+    font-size: 1.063rem;
+    color: $white;
+    background-color: #999aa2;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    padding: 7px 20px 3px;
+}
+
+.button_search-xs {
+    position: absolute;
+    right: 5px;
+    font-size: 20px;
+    line-height: 47px;
+    color: $dark-grey;
+    background: none;
+    border: none;
+}

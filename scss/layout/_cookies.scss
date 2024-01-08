@@ -1,5 +1,6 @@
 .cookies_consent-button {
     position: fixed; // Position button outside of document flow.
+    z-index: 99;
 
     font-size: .8rem;
     font-weight: 600;
