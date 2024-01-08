@@ -1,30 +1,25 @@
 .services-sections {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0px;
 }
 
 .services-grid-wrapper {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin: 0px -15px;
 }
 
 .services-heading-1 {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 8px;
-    
     display: flex;
     justify-content: space-between; // Create space between headings.
-
+    padding: 0px 15px;
+    margin-bottom: 8px;
     color: $dark-grey;
     
-    h1 {
+    > h1 {
         font-size: 2.7rem;
         margin: 0;
     }
 
-    a {
-        display: none;
+    h3 > a {
+        display: none; // Hide 'View Our Work' heading by default.
         font-size: 1.625rem;
         margin: 0;
         
@@ -32,71 +27,62 @@
             text-decoration: underline;
         }
 
-        i {
-            height: 26px;
-            font-size: 26px;
-        }
-
+        // Show 'View Our Work' heading on small+ devices.
         @include mq_min(small) {
             display: block;
         }
     }
 
+    // Adjust bottom margin on small+ devices.
     @include mq_min(small) {
         margin-bottom: -5px;
     }
 }
 
 .services-heading-2 {
-    display: none!important;
     text-align: center;
     margin: 30px auto -70px;
 
-    h3 {
+    > h3 {
         font-size: 1.625rem;
         line-height: 1.1;
         color: $dark-grey;
         margin-bottom: 15px;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
-    @include mq_max(small) {
-        display: block!important;
+    // Hide heading 2 on small+ devices.
+    @include mq_min(small) {
+        display: none;
     }
 }
 
 .services-grid-1 {
     display: grid;
 
+    // Colors for each service in grid 1.
     $grid-1-colors: #67809f, #4183d7, #2ecc71;
 
+    // Loop through services and set array colors.
     @for $i from 1 through length($grid-1-colors) {
         .service:nth-child(#{$i}) {
 
-            .service-icon, .button {
-                background-color: nth($grid-1-colors, $i);
-                border-color: nth($grid-1-colors, $i);
-            }
+            .service-icon, .button { background-color: nth($grid-1-colors, $i); border-color: nth($grid-1-colors, $i); }
 
-            .service-box {
+            // Change colors when hovering.
+            .service-box:hover { 
+                transition: .5s ease; background-color: nth($grid-1-colors, $i); 
 
-                &:hover {
-                    transition: .5s ease;
-                    background-color: nth($grid-1-colors, $i);
-
-                    .service-icon, .button {
-                        color: nth($grid-1-colors, $i);
-                        background-color: $white;
-                        border-color: $white;
-                    }
-
-                    h2, p {
-                        color: $white;
-                    }
-                }
+                .service-icon, .button { color: nth($grid-1-colors, $i); background-color: $white; border-color: $white;}
+                h2, p { color: $white; }
             }
         }
     }
 
+    // Show 3 services in row on medium+ devices.
     @include mq_min(medium) {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -105,52 +91,44 @@
 .services-grid-2 {
     display: grid;
 
+    // Colors for each service in grid 2.
     $grid-2-colors: #d64541, #926fb1, #f62459, #ce4125;
 
+    // Loop through services and set array colors.
     @for $i from 1 through length($grid-2-colors) {
         .service:nth-child(#{$i}) {
 
-            .service-icon, .button {
-                background-color: nth($grid-2-colors, $i);
-                border-color: nth($grid-2-colors, $i);
-            }
+            .service-icon, .button { background-color: nth($grid-2-colors, $i); border-color: nth($grid-2-colors, $i); }
 
-            .service-box {
-                &:hover {
-                    transition: .5s ease;
-                    background-color: nth($grid-2-colors, $i);
-
-                    .service-icon, .button {
-                        color: nth($grid-2-colors, $i);
-                        background-color: $white;
-                        border-color: $white;
-                    }
-
-                    h2, p {
-                        color: $white;
-                    }
-                }
+            // Change colors when hovering.
+            &:hover { 
+                .service-box { transition: .5s ease; background-color: nth($grid-2-colors, $i); }
+                .service-icon, .button { color: nth($grid-2-colors, $i); background-color: $white; border-color: $white;}
+                h2, p { color: $white; }
             }
         }
     }
 
+    // Show 2 services on small+ devices.
     @include mq_min(small) {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    // Show 4 services on large+ devices.
     @include mq_min(large) {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
 .service {
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
+    position: relative; // Required for moving service container.
+    padding: 0px 15px; // Indent.
 
+    // Reset service position.
     top: 0;
     transition: .5s ease;
 
+    // Move service container up when hovering.
     &:hover {
         top: -10px;
         transition: .5s ease;
@@ -162,12 +140,15 @@
     flex-direction: column;
     align-items: center;
 
+    // Add rounded corners and show to service box.
     color: $dark-grey;
     border-radius: 15px;
-    border: 1px solid $grey;
-    padding: 30px;
+    border: 1px solid $grey; 
     box-shadow: 0 3px 35px rgba(0,0,0,.1);
-    margin-top: 30px;
+
+    padding: 30px;
+    margin-top: 30px; // Create vertical space between services.
+    transition: .5s ease; // Make resetting background color smooth.
 
     h2 {
         font-size: 1.3rem;
