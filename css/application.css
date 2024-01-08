@@ -1663,21 +1663,21 @@ footer a:hover {
   border-color: #d64541;
 }
 
-/* line 105, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.services-grid-2 .service:nth-child(1):hover .service-box {
+/* line 104, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.services-grid-2 .service:nth-child(1) .service-box:hover {
   transition: .5s ease;
   background-color: #d64541;
 }
 
-/* line 106, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.services-grid-2 .service:nth-child(1):hover .service-icon, .services-grid-2 .service:nth-child(1):hover .button {
+/* line 107, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.services-grid-2 .service:nth-child(1) .service-box:hover .service-icon, .services-grid-2 .service:nth-child(1) .service-box:hover .button {
   color: #d64541;
   background-color: #fff;
   border-color: #fff;
 }
 
-/* line 107, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.services-grid-2 .service:nth-child(1):hover h2, .services-grid-2 .service:nth-child(1):hover p {
+/* line 108, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.services-grid-2 .service:nth-child(1) .service-box:hover h2, .services-grid-2 .service:nth-child(1) .service-box:hover p {
   color: #fff;
 }
 
@@ -1687,21 +1687,21 @@ footer a:hover {
   border-color: #926fb1;
 }
 
-/* line 105, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.services-grid-2 .service:nth-child(2):hover .service-box {
+/* line 104, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.services-grid-2 .service:nth-child(2) .service-box:hover {
   transition: .5s ease;
   background-color: #926fb1;
 }
 
-/* line 106, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.services-grid-2 .service:nth-child(2):hover .service-icon, .services-grid-2 .service:nth-child(2):hover .button {
+/* line 107, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.services-grid-2 .service:nth-child(2) .service-box:hover .service-icon, .services-grid-2 .service:nth-child(2) .service-box:hover .button {
   color: #926fb1;
   background-color: #fff;
   border-color: #fff;
 }
 
-/* line 107, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.services-grid-2 .service:nth-child(2):hover h2, .services-grid-2 .service:nth-child(2):hover p {
+/* line 108, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.services-grid-2 .service:nth-child(2) .service-box:hover h2, .services-grid-2 .service:nth-child(2) .service-box:hover p {
   color: #fff;
 }
 
@@ -1711,21 +1711,21 @@ footer a:hover {
   border-color: #f62459;
 }
 
-/* line 105, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.services-grid-2 .service:nth-child(3):hover .service-box {
+/* line 104, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.services-grid-2 .service:nth-child(3) .service-box:hover {
   transition: .5s ease;
   background-color: #f62459;
 }
 
-/* line 106, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.services-grid-2 .service:nth-child(3):hover .service-icon, .services-grid-2 .service:nth-child(3):hover .button {
+/* line 107, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.services-grid-2 .service:nth-child(3) .service-box:hover .service-icon, .services-grid-2 .service:nth-child(3) .service-box:hover .button {
   color: #f62459;
   background-color: #fff;
   border-color: #fff;
 }
 
-/* line 107, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.services-grid-2 .service:nth-child(3):hover h2, .services-grid-2 .service:nth-child(3):hover p {
+/* line 108, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.services-grid-2 .service:nth-child(3) .service-box:hover h2, .services-grid-2 .service:nth-child(3) .service-box:hover p {
   color: #fff;
 }
 
@@ -1735,21 +1735,21 @@ footer a:hover {
   border-color: #ce4125;
 }
 
-/* line 105, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.services-grid-2 .service:nth-child(4):hover .service-box {
+/* line 104, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.services-grid-2 .service:nth-child(4) .service-box:hover {
   transition: .5s ease;
   background-color: #ce4125;
 }
 
-/* line 106, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.services-grid-2 .service:nth-child(4):hover .service-icon, .services-grid-2 .service:nth-child(4):hover .button {
+/* line 107, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.services-grid-2 .service:nth-child(4) .service-box:hover .service-icon, .services-grid-2 .service:nth-child(4) .service-box:hover .button {
   color: #ce4125;
   background-color: #fff;
   border-color: #fff;
 }
 
-/* line 107, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.services-grid-2 .service:nth-child(4):hover h2, .services-grid-2 .service:nth-child(4):hover p {
+/* line 108, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.services-grid-2 .service:nth-child(4) .service-box:hover h2, .services-grid-2 .service:nth-child(4) .service-box:hover p {
   color: #fff;
 }
 
@@ -1767,22 +1767,14 @@ footer a:hover {
   }
 }
 
-/* line 123, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+/* line 124, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
 .service {
-  position: relative;
   padding: 0px 15px;
-  top: 0;
-  transition: .5s ease;
 }
 
-/* line 132, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
-.service:hover {
-  top: -10px;
-  transition: .5s ease;
-}
-
-/* line 138, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+/* line 129, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
 .service-box {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1792,10 +1784,17 @@ footer a:hover {
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
   padding: 30px;
   margin-top: 30px;
+  top: 0;
   transition: .5s ease;
 }
 
-/* line 153, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+/* line 146, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+.service-box:hover {
+  top: -10px;
+  transition: .5s ease;
+}
+
+/* line 151, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
 .service-box h2 {
   font-size: 1.3rem;
   font-weight: 400;
@@ -1804,7 +1803,7 @@ footer a:hover {
   margin: 0 0 11px;
 }
 
-/* line 161, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+/* line 159, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
 .service-box p {
   font-size: .8125rem;
   line-height: 1.375rem;
@@ -1812,12 +1811,12 @@ footer a:hover {
   margin-top: 0;
 }
 
-/* line 168, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+/* line 166, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
 .service-box .button {
   color: #fff;
 }
 
-/* line 173, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+/* line 171, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
 .service-icon {
   height: 65px;
   width: 65px;
@@ -1827,7 +1826,7 @@ footer a:hover {
   margin-bottom: 17px;
 }
 
-/* line 181, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
+/* line 180, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_services.scss */
 .service-icon i {
   font-size: 2rem;
   line-height: 62px;
