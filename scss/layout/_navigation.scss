@@ -71,7 +71,7 @@
 .navigation-item-icon {
     display: block;
     font-size: 1.438rem;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .navigation-item-menu {
@@ -134,4 +134,8 @@
 
 .navigation-link-text {
     margin-left: 10px; // Add space between icon and text.
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

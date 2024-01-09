@@ -21,16 +21,6 @@ footer {
         line-height: 1.375rem;
     }
 
-    // Make footer links white and remove underline.
-    a {
-        color: $white;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
     @include mq_min(large) {
         padding: 47px 0 0;
     }
@@ -82,6 +72,11 @@ footer {
         background-color: #212330;
         margin-right: 7px;
 
+        span {
+            position: relative;
+            top: 4px;
+        }
+
         // Include right and bottom margin on screens up to 1259px wide.
         @include mq_max(large) {
             margin-right: 10px;
@@ -110,6 +105,16 @@ footer {
 .footer_links {
     margin-left: -15px;
     margin-right: -15px;
+
+    // Make footer links white and remove underline.
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 
     // Wrap link menus to a new line on screens up to 991px wide.
     @include mq_max(medium) {

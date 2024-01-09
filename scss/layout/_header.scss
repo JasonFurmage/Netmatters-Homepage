@@ -39,7 +39,7 @@
     align-self: center;
 
     // Set mobile button size, color and add space to left.
-    > a > i {
+    .icon-phone_in_talk {
         font-size: 32px;
         color: $dark-grey;
         margin-left: 15px;
@@ -65,6 +65,7 @@
 
         // Style header buttons.
         &.button {
+            //display: flex; // Align icons and text properly.
             height: 56px;
             line-height: 46px;
             font-size: 1.125rem;
@@ -75,10 +76,11 @@
                 margin-left: 20px;
             }
 
-            // Set button icon size.
-            i {
-                font-size: 22.1px;
-                margin-right: 1px;
+            // Set size of icons and add right margin.
+            .icon-mouse, .icon-paperplane {
+                font-size: 1.438rem;
+                line-height: 45px;
+                margin-right: 5px;
             }
         }
 
@@ -119,6 +121,10 @@
     width: 33px;
     background-color: $white;
 
+    &:nth-child(1) {
+        margin-top: 1px;
+    }
+
     // Add space between lines.
     &:nth-child(2) {
         margin: 6px 0px;
@@ -140,6 +146,11 @@
 
         .button_search {
             @media (min-width: 992px) and (max-width:1259px) { border-radius: 3px; } // Change submit button radius when search field is hidden.
+        }
+
+        // Set icon size.
+        .icon-search {
+            font-size: 23px;
         }
     }
 

@@ -6,6 +6,7 @@
 .latest-news_headings-wrapper {
     display: flex;
     justify-content: space-between; // Create space between latest news heading and view all heading.
+    align-items: center;
 
     padding-top: 50px;
 }
@@ -61,6 +62,10 @@
                     background-color: nth($colors, $i);
                     border-color: nth($colors, $i);
                 }
+
+                .article-tag {
+                    background-color: nth($colors, $i);
+                }
             }
         }
     }
@@ -109,6 +114,19 @@
         width: 100%;
         max-width: 100%;
     }
+}
+
+.article-tag {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: #fff;
+    font-size: .75rem;
+    padding: 0 10px;
+    line-height: 1.438rem;
+    text-transform: uppercase;
+    z-index: 1;
+    font-weight: 600;
 }
 
 .article-text {

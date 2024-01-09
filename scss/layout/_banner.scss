@@ -1,5 +1,5 @@
 .banner {
-    //position: relative;
+    
 }
 
 .banner-item {
@@ -28,7 +28,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    //z-index: 4;
 
     // Create dim effect on medium+ devices.
     @media (max-width: 992px) {
@@ -57,10 +56,8 @@
 }
 
 .banner-content-wrapper {
-    //position: relative;
     color: $white;
     z-index: 4; // Keep content above gradient.
-    //padding: 3.75rem 0;#
 
     h1 {
         font-size: 2.5rem;
@@ -89,14 +86,13 @@
     }
 
     .button {
-        //color: #fff;
         font-size: 1.25rem;
         background-color: #926fb1;
         border-color: #926fb1;
-        //height: auto;
         padding: 5px 20px;
         margin-top: 1.938rem;
         margin-bottom: 1.125rem;
+        line-height: 50px;
 
         // Change button color on hover.
         &:hover {
@@ -104,11 +100,10 @@
             border-color: #735093;
         }
 
-        // Create grap between icon and text.
-        i {
-            line-height: 50px;
+        .icon-arrow-right2 {
+            align-self: center;
             margin-right: -4px;
-            margin-left: 9px;
+            margin-left: 12px;
         }
     }
 
