@@ -34,7 +34,6 @@
 .latest-news_article-wrapper {
     position: relative;
     padding: 0px 15px;
-    width: 33.3%;
 
     // Loop through articles setting colors for titles, buttons and tags.
     @for $i from 1 through length($article-colors) {
@@ -50,6 +49,10 @@
         &:nth-child(3) {
             display: none;
         }
+    }
+
+    @include mq_min(large) {
+        width: 33.3%;
     }
 }
 
