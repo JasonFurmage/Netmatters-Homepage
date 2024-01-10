@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/* Colors
+   ========================================================================== */
+/* Media Query
+   ========================================================================== */
+/* Other
+   ========================================================================== */
 /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_placeholders.scss */
 .newsletter-subscribe-button, .clients-description-button, .latest-news-article-button, .welcome-button, .services-item-button, .banner-item-button, .header-button, .burger-button {
   display: inline-flex;
@@ -71,6 +77,43 @@
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* line 2, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
+.xs-only {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  /* line 2, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
+  .xs-only {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  /* line 11, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
+  .md-lg-only {
+    display: none;
+  }
+}
+
+/* line 18, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
+.sm-lg-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  /* line 18, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
+  .sm-lg-only {
+    display: block;
+  }
+}
+
+/* line 28, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
+.required:after {
+  content: " *";
+  color: #d24d57;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

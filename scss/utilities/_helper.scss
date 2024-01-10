@@ -1,0 +1,32 @@
+// Only show element on screens up to 768px wide.
+.xs-only {
+    display: block;
+
+    @include mq_min(small) {
+        display: none;
+    }
+}
+
+// Hide element on screen less than 992px wide.
+.md-lg-only {
+    @include mq_max(medium) {
+        display: none;
+    }
+}
+
+// Only show element on screens at least 768px wide.
+.sm-lg-only {
+    display: none;
+
+    @include mq_min(small) {
+        display: block;
+    }
+}
+
+// Add asterick after label.
+.required {
+    &:after {
+        content: " *";
+        color: #d24d57;
+    }
+}
