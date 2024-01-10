@@ -65,7 +65,7 @@
 }
 
 .button_search {
-    @include text_style(1.063rem, $white);
+    @include text_style(1.063rem, $color: $white);
     height: 56px;
     width: 63px;
     background-color: #999aa2;
