@@ -13,7 +13,7 @@
     opacity: 0; // Hide checkbox.
 
     // When checked insert custom checkmark in wrapper.
-    &:checked + div:before {
+    &:checked + .newsletter_form-checkbox-wrapper:before {
         content: "✓";
         @include flex_style($align-items: center, $justify-content: center);
         height: 100%;

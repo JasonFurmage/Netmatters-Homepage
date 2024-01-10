@@ -24,13 +24,16 @@
 .burger-button {
     @extend %button;
     @include button_style($background-color: $dark-grey, $hover-color: #22242e);
-    @include flex_style($flex-direction: column, $justify-content: center);
+    @include flex_style($flex-direction: column, $align-items: center, $justify-content: center);
     height: 56px;
     border-width: 0px;
     margin-left: 20px;
 }
 
-.burger-button-line {
+.burger-button-line {    
+    padding: 0;
+    margin: 0;
+
     // Create burger box lines.
     height: 4px;
     width: 33px;

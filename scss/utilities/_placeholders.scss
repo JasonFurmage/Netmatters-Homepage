@@ -14,6 +14,12 @@
         margin-right: -4px;
         margin-left: 12px;
     }
+
+    // Prevent burger lines from getting uncentered.
+    .burger-button-line {
+        margin-right: 0;
+        margin-left: 0;
+    }
 }
 
 %fill-container {
