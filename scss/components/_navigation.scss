@@ -1,0 +1,19 @@
+.navigation-bar-item-icon {
+    display: block;
+    font-size: 1.438rem;
+    padding-bottom: 8px;
+}
+
+.navigation-bar-link-icon {
+    @include flex_style($align-items: center);
+    min-width: 25px;
+}
+
+.navigation-bar-link-text {
+    margin-left: 10px; // Add space between icon and text.
+
+    // Show underline when hovering over navigation bar links.
+    &:hover {
+        text-decoration: underline;
+    }
+}

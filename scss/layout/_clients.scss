@@ -1,52 +1,44 @@
 .clients {
-    padding-top: 50px;
-    padding-bottom: 50px
+    padding: 50px 0;
 }
 
-.clients-row {
+.clients_row {
     display: flex;
 }
 
-.clients-item {
+.clients_row-item {
+    @include flex_style($align-items: center); // Center so logos are not stretched.
     position: relative;
-    display: flex;
-    align-items: center;
 
-    // Add gap between client logos.
+    // Add gap between logos.
     padding: 0 20px;
     margin-right: 50px;
 
     img {
         max-height: 70px;
         max-width: 200px;
-
-        filter: grayscale(1); // Make client logo black and white.
-
-        // Make client logos color when hovering.
-        &:hover {
-            filter: grayscale(0);
-        }
+        @extend %greyscale-hover-effect;
     }
 
-    // Show client description on hover.
+    // Show clients description box on hover.
     &:hover {
-        .item-description {
+        .clients_row-item-description {
             display: block;
         }
     }
 
-    // Set button colors and hover colors for description boxes.
-    &:nth-child(1) { .button { background-color: #926fb1; border-color: #926fb1; } .button:hover { background-color: #7e57a0; border-color: #735093; } }
-    &:nth-child(2) { .button { background-color: #926fb1; border-color: #926fb1; } .button:hover { background-color: #7e57a0; border-color: #735093; } }
-    &:nth-child(3) { .button { background-color: #2ecc71; border-color: #2ecc71; } .button:hover { background-color: #26ab5f; border-color: #239a55; } }
-    &:nth-child(6) { .button { background-color: #67809f; border-color: #67809f; } .button:hover { background-color: #566c88; border-color: #4e627b; } }
-    &:nth-child(10) { .button { background-color: #4183d7; border-color: #4183d7; } .button:hover { background-color: #2a6ec6; border-color: #2665b5; } }
-    &:nth-child(11) { .button { background-color: #2ecc71; border-color: #2ecc71; } .button:hover { background-color: #26ab5f; border-color: #239a55; } }
-    &:nth-child(13) { .button { background-color: #2ecc71; border-color: #2ecc71; } .button:hover { background-color: #26ab5f; border-color: #239a55; } }
+    // Set button background and hover colors for description boxes.
+    &:nth-child(1) { .clients-description-button { @include button_style($white, #926fb1, #7e57a0); } }
+    &:nth-child(2) { .clients-description-button { @include button_style($white, #926fb1, #7e57a0); } }
+    &:nth-child(3) { .clients-description-button { @include button_style($white, #2ecc71, #26ab5f); } }
+    &:nth-child(6) { .clients-description-button { @include button_style($white, #67809f, #566c88); } }
+    &:nth-child(10) { .clients-description-button { @include button_style($white, #4183d7, #2a6ec6); } }
+    &:nth-child(11) { .clients-description-button { @include button_style($white, #2ecc71, #26ab5f); } }
+    &:nth-child(13) { .clients-description-button { @include button_style($white, #2ecc71, #26ab5f); } }
 }
 
-.item-description {
-    display: none;
+.clients_row-item-description {
+    display: none; // Hide by default.
 
     // Set size and position of description box.
     position: absolute;
@@ -55,73 +47,36 @@
     right: -200px;
 }
 
-.item-description-box {
-    text-align: center;
-    color: $white;
-    background-color: $dark-grey;
+.clients_row-item-description-box {
+    @include text_style($color: $white, $text-align: center);
     max-width: 280px;
+    background-color: $dark-grey;
     padding: 20px;
     margin: 0 auto 50px;
 
-    > h3 {
-        position: relative;
+    h3 {
         font-size: 1.125rem;
         padding-bottom: 17px;
         margin: 0;
     }
 
-    > p {
-        font-size: .8125rem;
-        line-height: 1.375rem;
+    p {
+        @include text_style(.8125rem, 1.375rem);
+        @extend %underline-links-on-hover;
         margin: 0 0 10px;
-
-        > a {
-            font-weight: 600; // Make link bold.
-
-            // Show underline on hover.
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    > a {
-        display: flex;
-        font-size: 16px;
-        margin-top: 11px;
-
-        // Add gap between text and icon.
-        > i {
-            line-height: 35px;
-            margin-left: 12px;
-            margin-right: -4px;
-        }
     }
 }
 
 .no-description {
+
     // Removing margin and padding on no description boxes.
     h3 {
-        padding-bottom: 0!important;
-        margin-bottom: 0!important;
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 
     // Hide paragraph on no description boxes.
     p {
         display: none;
-    }
-}
-
-.item-arrow {
-    // Size and position arrow below item description.
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    margin-left: -36px;
-
-    // Draw arrow.
-    &:after {
-        content: "";
-        @include small_arrow;
     }
 }

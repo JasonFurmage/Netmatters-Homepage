@@ -1,0 +1,14 @@
+.latest-news-article-button {
+    @extend %button;
+}
+
+.latest-news-article-tag {
+    @include text_style(.75rem, $font-weight: 600, $color: $white, $line-height: 1.438rem);
+    position: absolute;
+    top: 10px; // Place in top right corner of article.
+    right: 0;
+    text-transform: uppercase;
+    padding: 0 10px;
+    z-index: 1;
+}
+

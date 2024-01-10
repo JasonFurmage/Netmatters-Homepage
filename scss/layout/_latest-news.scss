@@ -1,178 +1,108 @@
-.latest-news {
-    //padding-top: 15px;
-    //padding-bottom: 50px;
-}
-
-.latest-news_headings-wrapper {
-    display: flex;
-    justify-content: space-between; // Create space between latest news heading and view all heading.
-    align-items: center;
-
+.latest-news_headings {
+    @include flex_style($align-items: center, $justify-content: space-between); // Use space between to put two headings on opposite sides.
     padding-top: 50px;
 }
 
-.latest-news_heading {
+.latest-news_big-heading {
     h1 {
-        font-size: 2.25rem;
-        font-weight: 400;
+        @include text_style(2.25rem, $font-weight: 400, $color: $dark-grey);
         margin: 0 0 28px;
-        color: #333645;
     }
 }
 
-.latest-news-heading-hidden-xs {
+.latest-news_small-heading {
+    @extend %underline-links-on-hover;
 
+    h3 {
+        @include text_style(1.625rem, $color: $dark-grey, $text-align: center, $line-height: 1.1);
+        margin: 0 0 15px;
+    }
 }
 
 .latest-news_articles {
-    margin-top: -30px;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin: -30px -15px 0px -15px;
+    padding-bottom: 50px; // Create gap betwen articles and view all heading.
 
-    //padding-top: 15px;
-    padding-bottom: 50px; //Create gap betwen articles and view all heading.
-
-    display: flex;
-    flex-direction: column;
+    @include flex_style($flex-direction: column, $align-items: center);
 
     // Change articles to row on screens at least 768px wide.
     @include mq_min(small) {
         flex-direction: row;
     }
+}
 
-    a {
-        font-weight: 600;
-        text-decoration: none;
-    }
+.latest-news_article-wrapper {
+    position: relative;
+    padding: 0px 15px;
 
-    $colors: (#926fb1, #ce4125, #2ecc71);
-
-    // Use loop to set colors for each article.
-    .latest-news_article-wrapper {
-        @for $i from 1 through length($colors) {
-            &:nth-child(#{$i}) {
-
-                a {
-                    color: nth($colors, $i);
-                }
-
-                .button {
-                    font-weight: 400;
-                    color: $white;
-                    background-color: nth($colors, $i);
-                    border-color: nth($colors, $i);
-                }
-
-                .article-tag {
-                    background-color: nth($colors, $i);
-                }
-            }
+    // Loop through articles setting colors for titles, buttons and tags.
+    @for $i from 1 through length($article-colors) {
+        &:nth-child(#{$i}) {
+            h3 strong { color: nth($article-colors, $i); }
+            .latest-news-article-button { @include button_style($white, nth($article-colors, $i)); font-weight: 400; } 
+            .latest-news-article-tag { background-color: nth($article-colors, $i); @extend %underline-links-on-hover; }
         }
     }
-
+    
     // Hide last article on screens between 768 and 1259px wide.
     @media (min-width: 768px) and (max-width: 1259px) {
-        .latest-news_article-wrapper:nth-child(3) {
+        &:nth-child(3) {
             display: none;
         }
     }
 }
 
-.latest-news_article-wrapper {
-    position: relative;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 .latest-news_article {
+    @extend %move-up-on-hover;
+    @extend %make-link;
     position: relative;
     margin-top: 30px;
-    top: 0;
-    transition: .5s ease;
-
-    // Move article up by 10px on hover.
-    &:hover {
-        top: -10px;
-        transition: .5s ease;
-    }
-
-    // Make entire article a link.
-    > a {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-    }
 }
 
-.article-image {
+.latest-news_article-image {
     img {
         display: block;
-        height: auto;
         width: 100%;
-        max-width: 100%;
     }
 }
 
-.article-tag {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    color: #fff;
-    font-size: .75rem;
-    padding: 0 10px;
-    line-height: 1.438rem;
-    text-transform: uppercase;
-    z-index: 1;
-    font-weight: 600;
-}
-
-.article-text {
-
-    padding: 30px;
-
-    // Give article rounded corners
+.latest-news_article-text {
+    // Give bottom of article rounded corners and add shadow.
     border-top: 0;
-    border-radius: 0 0 3px 3px;
     border: 1px solid $grey;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 3px 35px rgba(0,0,0,.1);
 
-    box-shadow: 0 3px 35px rgba(0,0,0,.1); // Add shadow.
+    padding: 30px; // Indent article text.
 
     h3 {
-        font-size: 1rem;
-        line-height: 1.5rem;
-        font-weight: 400;
+        @include text_style(1rem, $font-weight: 400, $line-height: 1.5rem);
         margin: 0 0 15px;
     }
 
     p {
-        line-height: 1.375rem;
-        font-size: .8125rem;
+        @include text_style(.8125rem, $line-height: 1.375rem);
         margin-bottom: 25px;
     }
 }
 
-.article-read-time {
+.latest-news_article-readtime {
+    @include text_style(.85rem, $color: rgba(51,54,69,.5));
     display: inline;
     text-transform: uppercase;
-    color: rgba(51,54,69,.5);
-    font-size: .85rem;
     vertical-align: middle;
 }
 
-.author {
+.latest-news_article-author {
+    @include flex_style($align-items: center); // Center avatar and details
     font-size: .875rem;
-    margin-top: 30px;
-    padding-top: 30px;
     border-top: 1px solid $grey;
+    padding-top: 30px;
+    margin-top: 30px;
 }
 
-.author-avatar {
-
-    display: table-cell;
-    border-radius: 50%;
+.latest-news_article-author-avatar {
+    border-radius: 50%; // Make avatar a circle.
     overflow: hidden;
 
     img {
@@ -180,59 +110,12 @@
     }
 }
 
-.author-details {
-
-    display: table-cell;
-    padding-left: 20px;
+.latest-news_article-author-details {
     line-height: 1.375rem;
-    vertical-align: middle;
+    padding-left: 20px;
 
+    // Make posted by text dark grey.
     strong {
         color: $dark-grey;
-    }
-}
-
-.latest_view-all {
-
-    display: none!important; // Hide view all heading on bigger screens.
-    text-align: center;
-    margin-bottom: 20px;
-
-    h3 {
-        font-size: 1.625rem;
-        margin: 0 0 15px;
-        line-height: 1.1;
-    }
-
-    a {
-        text-decoration: none;
-        color: $dark-grey;
-    }
-
-    // Show view all heading on screens up to 767px wide.
-    @include mq_max(small) {
-        display: block!important;
-    }
-}
-
-.latest_view-all2 {
-
-    text-align: center;
-    margin-bottom: 20px;
-
-    h3 {
-        font-size: 1.625rem;
-        margin: 0 0 15px;
-        line-height: 1.1;
-    }
-
-    a {
-        text-decoration: none;
-        color: $dark-grey;
-    }
-
-    // Hide view all heading on screens up to 767px wide.
-    @include mq_max(small) {
-        display: none!important;
     }
 }

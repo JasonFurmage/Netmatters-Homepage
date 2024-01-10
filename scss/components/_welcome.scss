@@ -1,0 +1,17 @@
+.welcome-button {
+    @extend %button;
+    @include button_style($background-color: #272936, $hover-color: #121318);
+    font-size: 20px;
+    border-radius: 6px;
+    padding: 10px 30px;
+}
+
+.-google {
+    @include button_style($background-color: #4387f6, $hover-color: #166af4);
+    border: none;
+}
+
+.-trustpilot {
+    @include button_style($background-color: #00b67b, $hover-color: #009b69);
+    border: none;
+}

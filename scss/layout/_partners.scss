@@ -1,0 +1,22 @@
+.partners {
+    padding: 50px 0;
+}
+
+.partners_row {
+    display: flex;
+}
+
+.partners_row-item {
+    @include flex_style($align-items: center); // Center so logos are not stretched.
+    position: relative;
+
+    // Add gap between logos.
+    padding: 0 20px;
+    margin-right: 50px;
+
+    img {
+        max-height: 70px;
+        max-width: 200px;
+        @extend %greyscale-hover-effect;
+    }
+}

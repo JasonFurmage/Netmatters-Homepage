@@ -1,0 +1,81 @@
+.header-mobile {
+    align-self: center;
+
+    // Set icon size, color and add space to left.
+    .icon-phone_in_talk {
+        @include text_style(32px, $color: $dark-grey);
+        margin-left: 15px;
+    }
+
+    // Hide mobile button on small+ sized devices.
+    @include mq_min(small) {
+        display: none;
+    }
+}
+
+.header-button {
+    @extend %button;
+    @include text_style(1.125rem, $color: $white, $line-height: 46px);
+    height: 56px;
+    align-items: stretch;
+
+    .icon-mouse, .icon-paperplane {
+        @include text_style(1.438rem, $line-height: 45px);
+        margin-right: 5px;
+    }
+
+    span {
+        margin-left: 0;
+    }
+}
+
+.-support {
+    @include button_style($background-color: #4183d7, $hover-color: #2a6ec6);
+}
+
+.-contact {
+    @include button_style($background-color: #999aa2, $hover-color: #84858f);
+}
+
+.burger {
+    @include flex_style($flex-direction: column, $justify-content: center);
+    height: 56px;
+    background-color: $dark-grey;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.burger-line {
+    // Create burger box lines.
+    height: 4px;
+    width: 33px;
+    background-color: $white;
+
+    // Fix alignment.
+    &:nth-child(1) {
+        margin-top: 1px;
+    }
+
+    // Add space between lines.
+    &:nth-child(2) {
+        margin: 6px 0px;
+    }
+}
+
+.button_search {
+    @include text_style(1.063rem, $white);
+    height: 56px;
+    width: 63px;
+    background-color: #999aa2;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    padding: 7px 20px 3px;
+
+    // Set icon size.
+    .icon-search {
+        font-size: 23px;
+    }
+}
+

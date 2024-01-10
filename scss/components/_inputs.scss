@@ -7,23 +7,6 @@
     padding: 5px 15px;
 }
 
-.input_checkbox {
-    opacity: 0; // Hide checkbox.
-    position: absolute;
-
-    // Insert checkmark into wrapper.
-    &:checked + div:before {
-        content: "✓";
-        display: flex;
-        height: 100%;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        color: $white;
-        background-color: #323544;
-    }
-}
-
 .input_search-field {
     display: inline-block;
     height: 56px;

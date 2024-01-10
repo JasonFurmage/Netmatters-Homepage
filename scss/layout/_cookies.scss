@@ -1,24 +1,17 @@
 .cookies_consent-button {
+    @include text_style(.8rem, $color: $white, $line-height: 22px, $font-weight: 600);
     position: fixed; // Position button outside of document flow.
-    z-index: 99;
-
-    font-size: .8rem;
-    font-weight: 600;
-
-    line-height: 22px;
+    z-index: 99; // Stay on top.
     bottom: 0;
     padding: 0 10px;
-    color: $white;
-    background: #75788a;
-    
-    border: solid #75788a;
+    background: $cookies-btn-color;
+    border: solid $cookies-btn-color;
     border-width: 1px 1px 0 0;
     border-top-right-radius: 10px; // Give top right of button a rounded corner.
-    
     cursor: pointer;
 
     // Highlight button during hover state.
     &:hover {
-        background-color: #999AA1;
+        background-color: $cookies-btn-hv-color
     }
 }

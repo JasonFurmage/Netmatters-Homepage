@@ -1,37 +1,34 @@
 .navigation {
-    position: relative; // Required for sub menu position.
-    background-color: #333645;
+    position: relative;
+    display: none; // Hide by default.
+    background-color: $dark-grey;
 
-    // Only show navigation bar on medium+ sized screens.
-    @include mq_max(medium) {
-        display: none;
+    // Show navigation bar on screens at least 992px wide.
+    @include mq_min(medium) {
+        display: block;
     }
 }
 
-.navigation-bar {
+.navigation_bar {
     > ul {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        @include flex_style($flex-direction: row, $align-items: center); // Display navigation bar items in a row.
     }
 }
 
-.navigation-item {
-    flex: 1; // Make each navigation item take up eqaul space.
+@include setup_navigation_bar($services); // Set up navigation bar service classes.
+
+.navigation_bar-item {
+    flex: 1; // Make each navigation item take up equal space.
     text-align: center;
 
     > a {
-        position: relative; // Required for down arrow position.
+        position: relative;
         display: block;
-        font-size: 1.125rem;
-        line-height: 1;
+        @include text_style(1.125rem, $line-height: 1, $color: $white);
         text-transform: uppercase;
-        color: $white;
         padding: 19px 0 18px;
 
-        > small {
+        small {
             display: block; // Make small text appear on new line.
             font-size: .625rem;
             padding-bottom: 1px;
@@ -39,49 +36,19 @@
     }
 
     // Show navigation item sub menu on hover.
-    &:hover .navigation-item-menu {
+    &:hover .navigation_bar-item-menu {
         display: block;
     }
-
-    // Arrays for icon colors and sub menu colors.
-    $i-colors: #67809f, #4183d7, #2ecc71, #d64541, #926fb1, #f62459, #ce4125;
-    $m-colors: #526781, #286abd, #25a25a, #bc2c28, #79539a, #de093f, #a3331d;
-
-    // Loop for adding all the icon colors and sub menu colors to each navigation item.
-    @for $i from 1 through length($i-colors) {
-        &:nth-child(#{$i}) {
-            .navigation-item-icon {color: nth($i-colors, $i);}
-            .navigation-item-menu {background-color: nth($m-colors, $i);}
-
-            // Change colors on hover.
-            &:hover {
-                background-color: nth($i-colors, $i);
-                .navigation-item-icon {color: $white;}
-
-                // Add down arrow beneath navigation item.
-                > a:before {
-                    content: "";
-                    @include down_arrow(nth($i-colors, $i));
-                }
-            }
-        }
-    }
 }
 
-.navigation-item-icon {
-    display: block;
-    font-size: 1.438rem;
-    padding-bottom: 8px;
-}
-
-.navigation-item-menu {
+.navigation_bar-item-menu {
+    // Position menu below navigation bar
     position: absolute;
     display: none;
     min-width: 100%;
     left: 0;
     z-index: 10; // Appear in front of banner.
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0px;
 
     // Remove container padding.
     .container {
@@ -89,53 +56,29 @@
     }
 }
 
-.navigation-menu-links {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+.navigation_bar-menu-links {
+    @include flex_style($flex-wrap: wrap, $align-items: center);
     text-align: left;
-    list-style: none;
-    padding: 0;
     margin-top: -15px;
 }
 
-.navigation-heading {
+.navigation_bar-menu-heading {
     width: 100%; // Make heading fill first row.
-    color: $white;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin: 15px 0px 10px 0;
 
-    > h2 {
-        font-size: 2rem;
-        font-weight: 400;
-        line-height: 1.1;
+    h2 {
+        @include text_style($font-size: 2rem, $font-weight: 400, $line-height: 1.1, $color: $white);
         margin: 0;
     }
 }
 
-.navigation-link {
+.navigation_bar-menu-link {
     width: 33%; // Shows 3 links per row.
     margin-top: 15px;
 
-    > a {
+    a {
         display: flex; // Put icon and text on same line.
-        color: $white;
-        font-size: 1.2rem;
-        line-height: 1.313rem;
+        @include text_style(1.2rem, $font-weight: 400, $line-height: 1.313rem, $color: $white);
         padding: 0.625rem 0.938rem 0.625rem 0;
-    }
-}
-
-.navigation-link-icon {
-    display: flex;
-    align-items: center;
-    min-width: 25px;
-}
-
-.navigation-link-text {
-    margin-left: 10px; // Add space between icon and text.
-
-    &:hover {
-        text-decoration: underline;
     }
 }

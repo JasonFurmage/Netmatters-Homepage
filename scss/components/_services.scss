@@ -1,0 +1,19 @@
+.services-item-button {
+    @extend %button;
+    color: $white;
+}
+
+.service-item-icon {
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    color: $white;
+    border-radius: 50%;
+    margin-bottom: 17px;
+
+    // Set icon size.
+    span {
+        font-size: 2rem;
+        line-height: 62px;
+    }
+}

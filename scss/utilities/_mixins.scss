@@ -1,3 +1,111 @@
+// Set common text properties.
+@mixin text_style($font-size: null, $text-align: null, $color: null, $line-height: null, $font-weight: null) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    text-align: $text-align;
+    color: $color;
+    line-height: $line-height;
+}
+
+// Set common flex properties.
+@mixin flex_style($flex-direction: null, $flex-wrap: null, $flex-grow: null, $align-items: null, $justify-content: null) {
+    display: flex;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    flex-grow: $flex-grow;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+// Set common button properties.
+@mixin button_style($color: null, $background-color: null, $hover-color: null) {
+    color: $color;
+    background-color: $background-color;
+    border-color: $background-color;
+
+    &:hover {
+        background-color: $hover-color;
+        border-color: $hover-color;
+    }
+}
+
+$services: 
+"bespoke-software", 
+"it-support", 
+"digital-marketing", 
+"telecoms-services", 
+"web-design", 
+"cyber-security", 
+"developer-course";
+
+$service-colors-map: (
+  bespoke-software: #67809f,
+  it-support: #4183d7,
+  digital-marketing: #2ecc71,
+  telecoms-services: #d64541,
+  web-design: #926fb1,
+  cyber-security: #f62459,
+  developer-course: #ce4125
+);
+
+$service-menu-colors-map: (
+    bespoke-software: #526781,
+    it-support: #286abd,
+    digital-marketing: #25a25a,
+    telecoms-services: #bc2c28,
+    web-design: #79539a,
+    cyber-security: #de093f,
+    developer-course: #a3331d
+);
+
+@mixin setup_navigation_bar($services) {
+    @each $service in $services {
+        .#{$service} {
+            .navigation-bar-item-icon {
+                color: map-get($service-colors-map, $service);
+            }
+            .navigation_bar-item-menu {
+                background-color: map-get($service-menu-colors-map, $service);
+            }
+
+            &:hover {
+                background-color: map-get($service-colors-map, $service);
+
+                .navigation-bar-item-icon {
+                    color: $white;
+                }
+
+                > a:before {
+                    content: "";
+                    @include down_arrow(map-get($service-colors-map, $service));
+                }
+            }
+        }
+    }
+}
+
+// Loop through array setting colors for service items.
+@mixin set_service_colors($colors) {
+    @for $i from 1 through length($colors) {
+        .services_grid-item-wrapper:nth-child(#{$i}) {
+            .service-item-icon, .services-item-button { background-color: nth($colors, $i); border-color: nth($colors, $i); }
+            .services_grid-item:hover { 
+                transition: .5s ease; background-color: nth($colors, $i); 
+                .service-item-icon, .services-item-button { color: nth($colors, $i); background-color: $white; border-color: $white;}
+                h2, p { color: $white; }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 // Simplify min-width media queries.
 @mixin mq_min($break) {
     @if $break == "x-small" {
@@ -63,12 +171,4 @@
     border-color: $color transparent transparent;
     border-style: solid;
     border-width: 35px 83.5px 0;
-}
-
-@mixin small_arrow {
-    margin: auto;
-    display: inline-block;
-    border-color: #333645 transparent transparent;
-    border-style: solid;
-    border-width: 35px 36px 0;
 }

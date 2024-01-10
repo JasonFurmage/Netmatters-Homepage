@@ -1,31 +1,13 @@
-.footer-license_wrapper {
-    font-size: .8125rem;
-    color: $white;
-    background-color: #212330;
+.footer-license {
+    @include text_style(.8125rem, $color: $white);
+    @extend %underline-links-on-hover;
+    background-color: $license-bg-color;
     padding-top: 10px;
-
-    // Make links white and remove underline.
-    a {
-        color: $white;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
 }
 
-.footer-license {
-    display: flex;
-    flex-direction: column;
+.footer-license_wrapper {
+    @include flex_style(column);
     padding: 5px 0 10px;
-
-    br {
-        // Hide break on screens at least 768px wide.
-        @include mq_min(small) {
-            display: none!important;
-        }
-    }
 
     // Put license text on single line on screens at least 768px wide.
     @include mq_min(small) {
@@ -34,7 +16,6 @@
 }
 
 .footer-license_sitemap {
-
     // Add hypthen before sitemap text on screens at least 768px wide.
     @include mq_min(small) {
 
@@ -45,9 +26,9 @@
             margin-right: 5px;
 
             // Remove underline and pointer from hypthen.
-            cursor: default;
-            text-decoration: none;
             display: inline-block;
+            text-decoration: none;
+            cursor: default;
         }
     }
 }

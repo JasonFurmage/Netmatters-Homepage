@@ -5,3 +5,25 @@
         color: #d24d57;
     }
 }
+
+.xs-only {
+    display: block;
+
+    @include mq_min(small) {
+        display: none;
+    }
+}
+
+.md-lg-only {
+    @include mq_max(medium) {
+        display: none;
+    }
+}
+
+.sm-lg-only {
+    display: none;
+
+    @include mq_min(small) {
+        display: block;
+    }
+}

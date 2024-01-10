@@ -1,145 +1,75 @@
 .welcome {
-    background-color: #333645;
-    color: #fff;
+    background-color: $dark-grey;
+    color: $white;
 }
 
-.welcome-sections-wrapper {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-left: -15px;
-    margin-right: -15px;
+.welcome_sections-wrapper {
+    padding: 50px 0px;
+    margin: 0px -15px;
 
-    // Show welcome sections in column on small screens.
-    display: flex;
-    flex-direction: column;
+    @include flex_style($flex-direction: column); // Show sections in column by default.
 
-    // Show welcome sections in column on devices in row on medium+ screens.
+    // Show sections in row on screens at least 992px wide.
     @include mq_min(medium) {
         flex-direction: row;
     }
 }
 
-.welcome-section {
-    //position: relative;
-    //min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    a {
-        color: #fff;
-    }
+.welcome_section {
+    padding: 0px 15px;
 
     h1 {
-        font-size: 36px;
-        line-height: 1.1;
-        margin-top: -6px;
-        margin-bottom: 40px;
+        @include text_style(36px, $line-height: 1.1);
+        margin: -6px 0px 40px 0px;
     }
 
     p {
+        @extend %underline-links-on-hover;
         line-height: 1.875rem;
-        margin-top: 0;
-        margin-bottom: 25px;
+        margin: 0px 0px 25px 0px;
     }
 
+    // Add space between stars and quote text.
     .icon-star {
         display: inline-block;
     }
 
-    // Make sections take up equal width on medium+ screens.
+    // Give sections equal width of screens at least 992px wide.
     @include mq_min(medium) {
         width: 50%;
     }
 }
 
-.welcome-buttons-wrapper {
-    
-    // Set margins for first button.
+.welcome_section-buttons-wrapper1 {
     a {
         &:first-child {
-
             @include mq_max(large) {
-                margin-bottom: 17px;
+                margin-bottom: 17px; // Set bottom margin for first welcome button on screens up to 1260px wide.
             }
-
-            //margin-right: 4px;
-        }
-    }
-
-    .button {
-        background-color: #272936;
-        border-radius: 6px;
-        padding: 10px 30px;
-        font-size: 20px;
-
-        // Set margins for arrow icon.
-        .icon-arrow-right2 {
-            align-self: center;
-            margin-right: -4px;
-            margin-left: 12px;
         }
 
-        &:hover {
-            background-color: #121318;
-            border-color: #121318;
-        }
-
-        // Set margin to 50px on small screens.
         @include mq_max(medium) {
-            margin-bottom: 50px;
+            margin-bottom: 50px; // Set bottom margin for welcome buttons on screens up to 992px wide.
         }
     }
 }
 
-.welcome-quote {
-    font-weight: 600;
-    font-size: 1.3rem;
-    font-style: italic;
+.welcome_section-quote {
+    @include text_style(1.3rem, $font-weight: 600);
 }
 
-.welcome-quote-author {
-    font-weight: 600;
-    color: #a3a8ac;
-    font-size: 1.1rem;
+.welcome_section-quote-author {
+    @include text_style(1.1rem, $color: #a3a8ac, $font-weight: 600);
+    @extend %underline-links-on-hover; 
+    a { color: $white } // Make author link white.
 }
 
-.welcome-review-buttons-wrapper {
-
-    // Set right margin for first button.
+.welcome_section-buttons-wrapper2 {
     a {
         &:first-child {
-            margin-right: 8px;
+            margin-right: 8px; // Set right margin for first button.
         }
 
-        // Set margins for arrow icon.
-        .icon-arrow-right2 {
-            margin-right: -4px;
-            margin-left: 12px;
-        }
-    }
-
-    .button {
-        border-radius: 6px;
-        padding: 10px 30px;
-        font-size: 20px;
-        border: none;
-        align-items: center;
-        margin-top: 20px;
-        
-        // Set background colour and highlight colour for google button.
-        &:first-child {
-            background-color: #4387f6;
-            &:hover {
-                background-color: #166af4;
-            }
-        }
-
-        // Set background colour and highlight colour for trustpilot button.
-        &:last-child {
-            background-color: #00b67b;
-            &:hover {
-                background-color: #009b69;
-            }
-        }
+        margin-top: 25px; // Set top margin for both buttons.
     }
 }

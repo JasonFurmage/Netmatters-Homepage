@@ -1,44 +1,36 @@
 footer {
-    font-size: .8125rem;
-    color: $white;
-    background-color: #323544;
-    padding: 27px 0 0;
+    @include text_style(.8125rem, $color: $white);
     position: relative;
+    background-color: $footer-bg-color;
+    padding: 27px 0 0;
 
-    // Make footer h4s uppercase.
+    // Uppercase list headings.
     h4 {
+        @include text_style(1rem, $font-weight: 400);
         text-transform: uppercase;
-        font-size: 1rem;
-        font-weight: 400;
         margin-bottom: 26px;
     }
 
-    // Remove bullet points from unordered lists.
     ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
         line-height: 1.375rem;
     }
 
+    // Add extra padding at top of footer on screens at least 1260px wide.
     @include mq_min(large) {
         padding: 47px 0 0;
     }
 }
 
 .footer_wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    @include flex_style($flex-wrap: wrap, $justify-content: space-between); // Wrap list to new line.
 }
 
 .footer_company {
-    
     h4 {
         margin-top: 20px;
     }
 
-    // Create gap between company and links section when screen is at least 1260px wide.
+    // Create gap between company and links section on screens at least 1260px wide.
     @include mq_min(large) {
         width: 400px;
     }
@@ -57,87 +49,66 @@ footer {
     }
 }
 
-.footer_company-social-media {
-    display: flex;
-    flex-wrap: wrap;
+.footer_company-social {
+    @include flex_style($flex-direction: wrap);
     margin-bottom: 30px;
-
-    // Style social media icons to look like buttons.
-    a {
-        text-align: center;
-        text-decoration: none;
-        font-size: 26px;
-        line-height: 26px;
-        padding: 12px 22px 16px;
-        background-color: #212330;
-        margin-right: 7px;
-
-        span {
-            position: relative;
-            top: 4px;
-        }
-
-        // Include right and bottom margin on screens up to 1259px wide.
-        @include mq_max(large) {
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-
-        // Make width of social media buttons 35% on screens up to 480px wide.
-        @include mq_max(x-small) {
-            width: 35%;
-        }
-
-        // Add colors to social media buttons.
-        &:nth-child(1):hover { background-color: #3b5998; }
-        &:nth-child(2):hover { background-color: #0077b5; }
-        &:nth-child(3):hover { background-color: #00aced; }
-        &:nth-child(4):hover { background-color: #d93175; }
-    }
 }
 
-// Center social media icons.
-.footer_company-social-media-icons {
-    position: relative;
-    top: 4px;
+.footer_company-social-icon {
+    @include text_style(26px, $line-height: 26px, $text-align: center); // Set icon size and alignment.
+
+    // Create box around icons.
+    background-color: $license-bg-color;
+    padding: 12px 22px 16px;
+    margin-right: 7px;
+
+    // Position icons.
+    span {
+        position: relative;
+        top: 4px;
+    }
+
+    // Include right and bottom margin on screens up to 1259px wide.
+    @include mq_max(large) {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    // Make width of social media buttons 35% on screens up to 480px wide.
+    @include mq_max(x-small) {
+        width: 35%;
+    }
+
+    // Add colors to social media buttons on hover.
+    &:nth-child(1):hover { background-color: $facebook-color }
+    &:nth-child(2):hover { background-color: $linkedin-color }
+    &:nth-child(3):hover { background-color: $twitter-color }
+    &:nth-child(4):hover { background-color: $instagram-color }
 }
 
 .footer_links {
-    margin-left: -15px;
-    margin-right: -15px;
-
-    // Make footer links white and remove underline.
-    a {
-        color: $white;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+    @extend %underline-links-on-hover;
+    margin: 0px -15px;
 
     // Wrap link menus to a new line on screens up to 991px wide.
     @include mq_max(medium) {
-        display: flex;
-        flex-wrap: wrap;
+        @include flex_style($flex-wrap: wrap);
     }
 
     // Make footer links section fill free space on screens at least 768px wide.
     @include mq_min(small) {
-        flex-grow: 1;
-        display: flex;
+        @include flex_style($flex-grow: 1);
     }
 }
 
 .footer_links-menu {
-    margin-bottom: 30px;
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0px 15px;
+    margin-bottom: 30px;
 
     h4 {
-        margin-top: 0;
         line-height: 1.1;
+        margin-top: 0;
     }
 
     // Make each links menu take up 50% of width on screens at least 768px wide.
@@ -145,6 +116,7 @@ footer {
         width: 50%;
     }
 
+    // Add extra margin on screens at least 1260px wide.
     @include mq_min(large) {
         margin-bottom: 40px;
     }

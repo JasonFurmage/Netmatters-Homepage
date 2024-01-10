@@ -4,10 +4,9 @@
 
 .header-row {
     display: flex;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin: 0px -15px;
 
-    // Keep content away from edge of screen on small devices.
+    // Set margin to 0 to keep content away from edges on screens up to 767px wide.
     @include mq_max(small) {
         margin: 0;
     }
@@ -15,16 +14,15 @@
 
 .header-logo {
     width: 100%; // Make logo container fill free space in header.
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0px 15px;
 
-    // Keep logo centered and remove padding on small devices.
+    // Keep logo centered and remove padding on screens up to 767px wide.
     @include mq_max(small) {
         align-self: center;
         padding: 0;
     }
 
-    > img {
+    img {
         display: block;
         max-width: 100%; // Prevent logo from expanding beyond container.
     }
@@ -35,61 +33,17 @@
     @include mq_min(large) { width: 33.33333333%; }
 }
 
-.header-mobile {
-    align-self: center;
-
-    // Set mobile button size, color and add space to left.
-    .icon-phone_in_talk {
-        font-size: 32px;
-        color: $dark-grey;
-        margin-left: 15px;
-    }
-
-    // Hide mobile button on small+ sized devices.
-    @include mq_min(small) {
-        display: none;
-    }
-}
-
 .header-actions {
-    display: flex;
-    justify-content: flex-end; // Force action content to right side.
+    @include flex_style($justify-content: flex-end); // Force action items to right side of screen.
     padding: 7px 0px;
 
-    > a {
-
-        // Hide buttons on small and medium sized devices.
-        @include mq_max(medium) {
-            display: none;
+    a {
+        &.-contact {
+            margin-left: 20px; // Add left margin to contact button.
         }
-
-        // Style header buttons.
-        &.button {
-            //display: flex; // Align icons and text properly.
-            height: 56px;
-            line-height: 46px;
-            font-size: 1.125rem;
-            color: $white;
-
-            // Add left margin space to second button.
-            +.button {
-                margin-left: 20px;
-            }
-
-            // Set size of icons and add right margin.
-            .icon-mouse, .icon-paperplane {
-                font-size: 1.438rem;
-                line-height: 45px;
-                margin-right: 5px;
-            }
-        }
-
-        // Set button colors and hover colors.
-        &:nth-child(1) { &.button { background-color: #4183d7; border-color: #4183d7; &:hover { background-color: #2a6ec6; border-color: #2665b5; } } }
-        &:nth-child(2) { &.button { background-color: #999aa2; border-color: #999aa2; &:hover { background-color: #84858f; border-color: #797a85; } } }
     }
 
-    // Add padding on small+ sized devices.
+    // Add padding on screens at least 768px wide.
     @include mq_min(small) {
         padding-left: 15px;
         padding-right: 15px;
@@ -99,36 +53,6 @@
     @include mq_min(small) { width: 50%; }
     @include mq_min(medium) { width: 58.33333333%; }
     @include mq_min(large) { width: 66.66666667%; }
-}
-
-.burger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    // Create burger box.
-    height: 56px;
-    background-color: $dark-grey;
-    border-radius: 3px;
-    padding: 5px 15px;
-    margin-left: 20px;
-    cursor: pointer;
-}
-
-.burger-line {
-    // Create burger box lines.
-    height: 4px;
-    width: 33px;
-    background-color: $white;
-
-    &:nth-child(1) {
-        margin-top: 1px;
-    }
-
-    // Add space between lines.
-    &:nth-child(2) {
-        margin: 6px 0px;
-    }
 }
 
 .header-search {
@@ -147,16 +71,6 @@
         .button_search {
             @media (min-width: 992px) and (max-width:1259px) { border-radius: 3px; } // Change submit button radius when search field is hidden.
         }
-
-        // Set icon size.
-        .icon-search {
-            font-size: 23px;
-        }
-    }
-
-    // Hide top search bar on small devices.
-    @include mq_max(small) {
-        display: none;
     }
 
     // Add space between search and buttons.
@@ -167,12 +81,7 @@
 
 .header-search-xs {
     form {
-        position: relative; // Needed for positioning search button.
+        position: relative;
         margin-top: 11px;
-    }
-
-    // Hide xs search bar on small+ devices.
-    @include mq_min(small) {
-        display: none;
     }
 }
