@@ -1773,6 +1773,13 @@ footer ul {
   }
 }
 
+@media (min-width: 768px) {
+  /* line 34, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_latest-news.scss */
+  .latest-news_article-wrapper {
+    width: 50%;
+  }
+}
+
 @media (min-width: 1260px) {
   /* line 34, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_latest-news.scss */
   .latest-news_article-wrapper {

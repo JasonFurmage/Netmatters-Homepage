@@ -51,9 +51,9 @@
         }
     }
 
-    @include mq_min(large) {
-        width: 33.3%;
-    }
+    // Make sure articles have same width and height when displayed in a row.
+    @include mq_min(small) { width: 50%; }
+    @include mq_min(large) { width: 33.3%; }
 }
 
 .latest-news_article {
