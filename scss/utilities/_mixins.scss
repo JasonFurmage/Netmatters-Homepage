@@ -29,59 +29,41 @@
     }
 }
 
-$services: 
-"bespoke-software", 
-"it-support", 
-"digital-marketing", 
-"telecoms-services", 
-"web-design", 
-"cyber-security", 
-"developer-course";
-
-$service-colors-map: (
-  bespoke-software: #67809f,
-  it-support: #4183d7,
-  digital-marketing: #2ecc71,
-  telecoms-services: #d64541,
-  web-design: #926fb1,
-  cyber-security: #f62459,
-  developer-course: #ce4125
-);
-
-$service-menu-colors-map: (
-    bespoke-software: #526781,
-    it-support: #286abd,
-    digital-marketing: #25a25a,
-    telecoms-services: #bc2c28,
-    web-design: #79539a,
-    cyber-security: #de093f,
-    developer-course: #a3331d
-);
-
+// Create navigation bar item classes using map and set icon and background colors.
 @mixin setup_navigation_bar($services) {
     @each $service in $services {
         .#{$service} {
-            .navigation-bar-item-icon {
-                color: map-get($service-colors-map, $service);
-            }
-            .navigation_bar-item-menu {
-                background-color: map-get($service-menu-colors-map, $service);
-            }
+
+            .navigation-bar-item-icon { color: map-get($service-colors-map, $service); }
+
+            .navigation_bar-item-menu { background-color: map-get($service-menu-colors-map, $service); }
 
             &:hover {
+
                 background-color: map-get($service-colors-map, $service);
 
-                .navigation-bar-item-icon {
-                    color: $white;
-                }
+                .navigation-bar-item-icon { color: $white; }
 
                 > a:before {
                     content: "";
-                    @include down_arrow(map-get($service-colors-map, $service));
+                    @include navigation_item_arrow(map-get($service-colors-map, $service)) // Add arrow below nav item.
                 }
             }
         }
     }
+}
+
+@mixin navigation_item_arrow($color) {
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 50%;
+    bottom: -35px;
+    border-style: solid;
+    border-width: 35px 83.5px 0;
+    border-color: $color transparent transparent;
+    transform: translateX(-50%);
+    z-index: 90;
 }
 
 // Loop through array setting colors for service items.
@@ -97,14 +79,6 @@ $service-menu-colors-map: (
         }
     }
 }
-
-
-
-
-
-
-
-
 
 // Simplify min-width media queries.
 @mixin mq_min($break) {
@@ -158,17 +132,4 @@ $service-menu-colors-map: (
             @content;
         }
     }
-}
-
-@mixin down_arrow($color) {
-    position: absolute;
-    left: 50%;
-    bottom: -35px;
-    transform: translateX(-50%);
-    z-index: 90;
-    width: 0;
-    height: 0;
-    border-color: $color transparent transparent;
-    border-style: solid;
-    border-width: 35px 83.5px 0;
 }

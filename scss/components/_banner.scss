@@ -1,7 +1,6 @@
 .banner-item-button {
     @extend %button;
     @include button_style($white, $background-color: #926fb1, $hover-color: #7e57a0);
-    font-size: 1.25rem;
-    line-height: 50px;
+    @include text_style(1.25rem, $line-height: 50px);
     padding: 5px 20px;
 }

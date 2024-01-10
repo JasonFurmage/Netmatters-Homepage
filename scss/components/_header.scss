@@ -1,15 +1,10 @@
-.header-mobile {
+.header-phone-button {
     align-self: center;
 
-    // Set icon size, color and add space to left.
+    // Set icon size and add space to left.
     .icon-phone_in_talk {
-        @include text_style(32px, $color: $dark-grey);
+        @include text_style(2rem, $color: $dark-grey);
         margin-left: 15px;
-    }
-
-    // Hide mobile button on small+ sized devices.
-    @include mq_min(small) {
-        display: none;
     }
 }
 
@@ -19,35 +14,23 @@
     height: 56px;
     align-items: stretch;
 
-    .icon-mouse, .icon-paperplane {
+    // Set icon size and add space to right.
+    span, .icon-mouse, .icon-paperplane {
         @include text_style(1.438rem, $line-height: 45px);
-        margin-right: 5px;
-    }
-
-    span {
-        margin-left: 0;
+        margin: 0px 5px 0px 0px;
     }
 }
 
-.-support {
-    @include button_style($background-color: #4183d7, $hover-color: #2a6ec6);
-}
-
-.-contact {
-    @include button_style($background-color: #999aa2, $hover-color: #84858f);
-}
-
-.burger {
+.burger-button {
+    @extend %button;
+    @include button_style($background-color: $dark-grey, $hover-color: #22242e);
     @include flex_style($flex-direction: column, $justify-content: center);
     height: 56px;
-    background-color: $dark-grey;
-    border-radius: 3px;
-    padding: 5px 15px;
+    border-width: 0px;
     margin-left: 20px;
-    cursor: pointer;
 }
 
-.burger-line {
+.burger-button-line {
     // Create burger box lines.
     height: 4px;
     width: 33px;
@@ -64,18 +47,63 @@
     }
 }
 
-.button_search {
+.header-searchfield {
+    @extend %highlight-textfield-on-focus;
+    display: inline-block;
+    height: 56px;
+    font-size: 0.875rem;
+    line-height: 1.42857143;
+    color: #555;
+    border: 1px solid #e5e5e5;
+    border-color: $grey;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    padding: 5px 15px;
+}
+
+.search-bar-button {
+    @include button_style($background-color: #999aa2, $hover-color: #7e808a);
     @include text_style(1.063rem, $color: $white);
     height: 56px;
     width: 63px;
-    background-color: #999aa2;
     border: none;
     border-radius: 0 3px 3px 0;
     padding: 7px 20px 3px;
+    cursor: pointer;
 
     // Set icon size.
     .icon-search {
-        font-size: 23px;
+        font-size: 1.438rem;
     }
 }
 
+.search-bar-button-xs {
+    @include text_style(1.25rem, $color: $dark-grey, $line-height: 47px);
+    position: absolute;
+    right: 5px;
+    background: none;
+    border: none;
+}
+
+.header-searchfield-xs {
+    height: 47px;
+    width: 100%;
+    font-size: 14px;
+    background-color: rgba(0,0,0,.1);
+    border: 2px solid rgba(0,0,0,.1);
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    padding: 5px 15px;
+
+    // Add shadow when search field is active.
+    &:active {
+        box-shadow: 0 0 3px $white;
+    }
+}
+
+.support-btn {
+    @include button_style($background-color: #4183d7, $hover-color: #2a6ec6);
+}
+
+.contact-btn {
+    @include button_style($background-color: #999aa2, $hover-color: #84858f);
+}

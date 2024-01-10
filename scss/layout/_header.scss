@@ -2,7 +2,7 @@
     padding: 20px 0px;
 }
 
-.header-row {
+.header_row {
     display: flex;
     margin: 0px -15px;
 
@@ -10,9 +10,16 @@
     @include mq_max(small) {
         margin: 0;
     }
+
+    // Hide mobile button on devices at least 768px wide.
+    @include mq_min(small) {
+        .header-phone-button {
+            display: none;
+        }
+    }
 }
 
-.header-logo {
+.header_logo {
     width: 100%; // Make logo container fill free space in header.
     padding: 0px 15px;
 
@@ -33,12 +40,12 @@
     @include mq_min(large) { width: 33.33333333%; }
 }
 
-.header-actions {
+.header_actions {
     @include flex_style($justify-content: flex-end); // Force action items to right side of screen.
     padding: 7px 0px;
 
     a {
-        &.-contact {
+        &.contact-btn {
             margin-left: 20px; // Add left margin to contact button.
         }
     }
@@ -55,33 +62,32 @@
     @include mq_min(large) { width: 66.66666667%; }
 }
 
-.header-search {
+.header_small-search-wrapper {
+    form {
+        position: relative;
+        margin-top: 11px;
+    }
+}
+
+.header_big-search-wrapper {
     form {
         display: flex;
 
-        .input_search-field {
-
+        .header-searchfield {
             // Set search field width according to screen size.
             @include mq_max(medium) { width: 174px; }
             @include mq_min(large) { width: 240px; }
 
-            @media (min-width: 992px) and (max-width:1259px) { display: none; } // Hide search search field between medium and large screens.
+            @media (min-width: 992px) and (max-width:1259px) { display: none; } // Hide search field on medium and large screens.
         }
 
-        .button_search {
+        .search-bar-button {
             @media (min-width: 992px) and (max-width:1259px) { border-radius: 3px; } // Change submit button radius when search field is hidden.
         }
     }
 
-    // Add space between search and buttons.
+    // Add space between search bar and buttons on screens at least 992px wide.
     @include mq_min(medium) {
         margin-left: 20px;
-    }
-}
-
-.header-search-xs {
-    form {
-        position: relative;
-        margin-top: 11px;
     }
 }

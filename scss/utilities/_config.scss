@@ -1,10 +1,45 @@
 // Colors
 
+// Only used once
+
+$searchfieldtxt: #555;
+
+//
+
+$default:#666;
+
+$purple:#926fb1;
+$dark-purple:#7e57a0;
+
+$search-grey: #999aa2;
+$search-grey-darker: #7e808a;
+
+$navsupportbtn: #4183d7;
+$navsupporthvr: #2a6ec6;
+$navcontacthvr: #84858f;
+$required:#d24d57;
+$welbtn: #272936;
+$welbtnhvr: #121318;
+$googlebtn: #4387f6;
+$googlebtnhv: #166af4;
+$trustpilotbtn: #00b67b;
+$trustpilotbtnhvr: #009b69;
+$gradient: #000;
+$client3hvr: #26ab5f;
+$client6: #67809f;
+$client6hvr: #566c88;
+$client10hvr: #2a6ec6;
+$quotecolor: #a3a8ac;
+$highlightclr: #5bc0de;
+
+
 $black          : #000;
 $white          : #fff;
-$grey           : #ccc;
+$lighter-grey   : #ddd;
+$light-grey     : #ccc;
 $dark-grey      : #333645;
 $darker-grey    : #22242e;
+
 
 $cookies-btn-color       :   #75788a;
 $cookies-btn-hv-color    :   #999AA1;
@@ -40,3 +75,36 @@ $brkpoint-max-lg : '(max-width: 1259px)';
 $cont-width-sm : 750px;
 $cont-width-md : 970px;
 $cont-width-lg : 1200px;
+
+// Services List
+
+$services: 
+"bespoke-software", 
+"it-support", 
+"digital-marketing", 
+"telecoms-services", 
+"web-design", 
+"cyber-security", 
+"developer-course";
+
+// Services Colors
+
+$service-colors-map: (
+  bespoke-software: #67809f,
+  it-support: #4183d7,
+  digital-marketing: #2ecc71,
+  telecoms-services: #d64541,
+  web-design: #926fb1,
+  cyber-security: #f62459,
+  developer-course: #ce4125
+);
+
+$service-menu-colors-map: (
+    bespoke-software: #526781,
+    it-support: #286abd,
+    digital-marketing: #25a25a,
+    telecoms-services: #bc2c28,
+    web-design: #79539a,
+    cyber-security: #de093f,
+    developer-course: #a3331d
+);
