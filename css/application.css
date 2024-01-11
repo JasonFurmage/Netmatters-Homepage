@@ -1134,11 +1134,6 @@ ul {
 }
 
 /* line 101, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_header.scss */
-.header-searchfield-xs:active {
-  box-shadow: 0 0 3px #fff;
-}
-
-/* line 106, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_header.scss */
 .support-btn {
   background-color: #4183d7;
   border-color: #4183d7;
@@ -1150,7 +1145,7 @@ ul {
   border-color: #2a6ec6;
 }
 
-/* line 110, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_header.scss */
+/* line 105, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_header.scss */
 .contact-btn {
   background-color: #999aa2;
   border-color: #999aa2;
