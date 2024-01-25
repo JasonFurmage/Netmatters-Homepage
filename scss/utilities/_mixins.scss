@@ -33,22 +33,25 @@
 @mixin setup_navigation_bar($services) {
     @each $service in $services {
         .#{$service} {
-
             .navigation-bar-item-icon { color: map-get($service-colors-map, $service); }
-
             .navigation_bar-item-menu { background-color: map-get($service-menu-colors-map, $service); }
-
             &:hover {
-
                 background-color: map-get($service-colors-map, $service);
-
                 .navigation-bar-item-icon { color: $white; }
-
                 > a:before {
                     content: "";
                     @include navigation_item_arrow(map-get($service-colors-map, $service)) // Add arrow below nav item.
                 }
             }
+        }
+    }
+}
+
+// Create banner button classes using map and set background colors.
+@mixin setup_banner_buttons($services) {
+    @each $service in $services {
+        .#{$service}-btn {
+            @include button_style($white, map-get($service-colors-map, $service), map-get($service-menu-colors-map, $service));
         }
     }
 }

@@ -4,3 +4,5 @@
     @include text_style(1.25rem, $line-height: 50px);
     padding: 5px 20px;
 }
+
+@include setup_banner_buttons($services);

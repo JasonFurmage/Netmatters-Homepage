@@ -10,6 +10,8 @@
     @include flex_style($align-items: center, $justify-content: space-between); // Use space between to put two headings on opposite sides.
     padding: 0px 15px;
     margin-bottom: 8px;
+
+    @include mq_min(large) { margin-bottom: 3px; } // Alignment fix.
 }
 
 .services_big-heading {
@@ -21,6 +23,7 @@
 
 .services_small-heading {
     @extend %underline-links-on-hover;
+    margin-bottom: -9px; // Alignment fix.
 
     h3 {
         @include text_style(1.625rem, $text-align: center, $color: $dark-grey);
