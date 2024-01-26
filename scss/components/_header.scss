@@ -28,6 +28,13 @@
     height: 56px;
     border-width: 0px;
     margin-left: 20px;
+
+    // Turn burger bars into X when active.
+    &.active {
+        .burger-button-line:nth-child(1) { transform: rotate(-45deg) translate(-7.5px, 6px); }
+        .burger-button-line:nth-child(2) { opacity: 0; }
+        .burger-button-line:nth-child(3) { transform: rotate(45deg) translate(-7.5px, -6px); }
+    }
 }
 
 .burger-button-line {    
@@ -38,6 +45,7 @@
     height: 4px;
     width: 33px;
     background-color: $white;
+    transition: 0.4s;
 
     // Fix alignment.
     &:nth-child(1) {

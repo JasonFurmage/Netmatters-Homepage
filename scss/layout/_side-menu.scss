@@ -1,0 +1,59 @@
+.sidebar {
+    @include flex_style(column);
+    right:0;
+    // Hide by default on small and medium devices.
+    visibility: hidden;
+    width: 0;
+    transition: 0.3s; // Animate width changes.
+  
+    height: 100%;
+    position: fixed; // Stay in place when scrolling.
+    background-color: $black;
+    overflow-x: hidden;
+    z-index: 1; // Stay on top of content.
+  
+    // Show sidebar on large+ devices.
+    // @include mq(large) {
+    //   visibility: visible!important;
+    //   width: 240px!important;
+    // }
+  }
+
+  .sidebar_header {
+    @include text_style(112px, $text-align: center, $color: $white);
+    background-color: $black;
+    padding: 0px 15px;
+  }
+  
+  .sidebar-divider {
+    height: 2px;
+    width: 200px;
+    background-color: $white;
+    align-self: center;
+  }
+  
+  .sidebar_links {
+    padding: 30px 15px;
+  
+    a {
+      display: block; // Put links on seperate line.
+      @include text_style(20px, center, $dark-grey, 48px);
+      padding: 6px 8px 6px 8px;
+      white-space: nowrap; // Prevents links from wrapping to next line.
+      :hover { color: grey; }
+    }
+  }
+  
+  .sidebar_social {
+    // Space icons evenly.
+    @include flex_style($justify-content: space-evenly);
+    
+    margin: auto 0px 2.5px 0px; // Pin social icons to the bottom of sidebar with small space beneath.
+  
+    // Set icon size and color.
+    a {
+      @include text_style(32px, $color: $dark-grey);
+      :hover { color: grey; }
+    }
+  }
+  

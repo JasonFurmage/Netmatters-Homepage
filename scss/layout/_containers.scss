@@ -17,3 +17,29 @@
         width: $cont-width-lg;
     }
 }
+
+.content {
+    // Animate transform.
+    transition: transform 0.3s ease;
+
+    // Move page contents to make room for side menu.
+    &.active {
+        transform: translateX(-240px);
+    }
+}
+
+.content-wrapper {
+    height: 100vh; // Show vertical scroll bar.
+    overflow-x: hidden; // Hide horizontal scroll bar.
+}
+
+// Dim page contents.
+.overlay {
+    display: none;
+    @extend %fill-container;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
