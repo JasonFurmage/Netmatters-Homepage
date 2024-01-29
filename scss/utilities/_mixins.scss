@@ -29,6 +29,14 @@
     }
 }
 
+@mixin setup_sidebar_icons($services) {
+    @each $service in $services {
+        .sb-#{$service} {
+            span { color: map-get($service-colors-map, $service); }
+        }
+    }
+}
+
 // Create navigation bar item classes using map and set icon and background colors.
 @mixin setup_navigation_bar($services) {
     @each $service in $services {

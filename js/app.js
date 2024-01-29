@@ -18,31 +18,30 @@ $(document).ready(function(){
 const content = document.getElementById("js-content");
 const overlay = document.getElementById("js-overlay");
 const burger = document.getElementById("js-burger");
-const sideMenu = document.getElementById("js-sidebar");
+const sidebar = document.getElementById("js-sidebar");
 
-let sideMenuVisible = false;
+let sidebarVisible = false;
 
-// Toggle side menu when burger button pressed.
+// Toggle sidebar when burger button pressed.
 $(document).ready(function() {
   $(burger).on('click', function() {
-    toggleSideMenu();
+    toggleSidebar();
   });
 });
 
-function toggleSideMenu() {
+function toggleSidebar() {
 
-  sideMenuVisible = !sideMenuVisible;
+  sidebarVisible = !sidebarVisible;
 
   // Animate burger button.
   $(burger).toggleClass('active');
   
-  // Change width and visibility of side menu.
-  sideMenu.style.visibility = sideMenuVisible ? "visible" : "hidden";
-  sideMenu.style.width = sideMenuVisible ? "240px" : "0"
+  // Change visibility of sidebar.
+  sidebar.style.visibility = sidebarVisible ? "visible" : "hidden";
 
   // Move page contents.
   content.classList.toggle('active');
 
   // Add or remove overlay from page contents.
-  overlay.style.display = sideMenuVisible ? "block" : "none";
+  overlay.style.display = sidebarVisible ? "block" : "none";
 }

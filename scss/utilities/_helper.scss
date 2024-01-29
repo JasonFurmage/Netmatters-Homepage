@@ -7,10 +7,12 @@
     }
 }
 
-// Hide element on screen less than 992px wide.
-.md-lg-only {
+// Only show element on screens up to 992px wide.
+.xs-md-only {
+    display: none;
+
     @include mq_max(medium) {
-        display: none;
+        display: block;
     }
 }
 
@@ -20,6 +22,13 @@
 
     @include mq_min(small) {
         display: block;
+    }
+}
+
+// Hide element on screen less than 992px wide.
+.md-lg-only {
+    @include mq_max(medium) {
+        display: none;
     }
 }
 

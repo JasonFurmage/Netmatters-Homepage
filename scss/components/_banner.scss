@@ -5,4 +5,4 @@
     padding: 5px 20px;
 }
 
-@include setup_banner_buttons($services);
+@include setup_banner_buttons($services); // Set up banner button service classes.
