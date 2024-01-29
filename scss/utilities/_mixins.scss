@@ -1,10 +1,11 @@
 // Set common text properties.
-@mixin text_style($font-size: null, $text-align: null, $color: null, $line-height: null, $font-weight: null) {
+@mixin text_style($font-size: null, $text-align: null, $color: null, $line-height: null, $font-weight: null, $text-transform: null) {
     font-size: $font-size;
     font-weight: $font-weight;
     text-align: $text-align;
     color: $color;
     line-height: $line-height;
+    text-transform: $text-transform;
 }
 
 // Set common flex properties.

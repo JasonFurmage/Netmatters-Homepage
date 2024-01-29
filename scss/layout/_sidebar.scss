@@ -1,139 +1,99 @@
 .sidebar {
   position: fixed; // Stay in place when scrolling.
-  visibility: hidden;
   height: 100%;
   width: 275px;
-  top: 0;
   right: 0; // Position on the right.
   background: $dark-grey;
   overflow: auto;
-  transition: 0.5s; // Animate for smooth transition.
+  transition: 0.5s; // Animate sidebar transition.
 
+  // Increase sidebar width of screens at least 992px wide.
   @include mq_min(medium) {
     width: 350px;
   }
 }
 
+// Add padding around lists.
 .sidebar_primary {
   padding: 21px;
+  > ul { margin: -20px 0 0; }
+  > ul > li { padding: 20px 0 0; }
+}
 
-  > ul {
-    margin: -20px 0 0;
+.sidebar_primary-heading {
+  @include text_style(1.125rem, center, $white, $text-transform: uppercase);
+  display: block;
 
-    > li {
-      padding: 20px 0 0;
+  // Style heading like button.
+  border: 1px solid hsla(0,0%,100%,.1);
+  border-radius: 3px;
+  outline: 1px solid rgba(0,0,0,.25);
+  padding: 19px 0 18px;
 
-      &:hover {
-        > a {
-          background-color: hsla(0,0%,100%,.05)
-        }
-      }
+  // Put icon and text on seperate lines.
+  * { display: block; }
 
-      > a {
-        @include text_style(1.125rem, center, $white);
-        display: block;
-        text-transform: uppercase;
-        border-radius: 3px;
-        padding: 19px 0 18px;
-        outline: 1px solid rgba(0,0,0,.25);
-        border: 1px solid hsla(0,0%,100%,.1);
+  // Set size of icon.
+  > span {
+    padding-bottom: 10px;
+    font-size: 1.438rem;
+  }
 
-        * {
-          display: block;
-        }
-
-        > span {
-          padding-bottom: 10px;
-          font-size: 1.438rem;
-        }
-
-        > small {
-          font-size: .625rem;
-          padding-bottom: 1px;
-        }
-      }
-    }
+  // Set size of small text.
+  > small {
+    font-size: .625rem;
+    padding-bottom: 1px;
   }
 }
 
 .sidebar_primary-submenu {
-  margin-top: 20px;
   border-radius: 3px;
-  overflow: hidden;
-
-  > ul li {
-    border-top: 1px solid rgba(0,0,0,.45);
-
-    > a {
-      display: block;
-      color: #fff;
-      text-align: center;
-      text-transform: uppercase;
-      background-color: rgba(0,0,0,.25);
-      padding: 10px;
-      text-decoration: none;
-      border-top: 1px solid hsla(0,0%,100%,.05);
-    }
-  }
+  margin-top: 20px;
+  > ul > li { border-top: 1px solid rgba(0,0,0,.45); } // Add depth effect to submenu items.
 }
 
-@include setup_sidebar_icons($services);
+.sidebar_primary-submenu-item {
+  @include text_style($text-align: center, $color: $white, $text-transform: uppercase);
+  display: block;
+  background-color: rgba(0,0,0,.25);
+  border-top: 1px solid hsla(0,0%,100%,.05); // Add depth effect to submenu items.
+  padding: 10px;
+}
 
+// Add depth effect to secondary headings
 .sidebar_secondary {
+  > ul { border-top: 1px solid rgba(0,0,0,.25); border-bottom: 1px solid hsla(0,0%,100%,.1); }
+  > ul > li { border-top: 1px solid hsla(0,0%,100%,.1); border-bottom: 1px solid rgba(0,0,0,.25); }
+}
 
-  > ul {
-    border-top: 1px solid rgba(0,0,0,.25);
-    border-bottom: 1px solid hsla(0,0%,100%,.1);
-
-    > li {
-      border-top: 1px solid hsla(0,0%,100%,.1);
-      border-bottom: 1px solid rgba(0,0,0,.25);
-
-      &:hover {
-        > a {
-          background-color: hsla(0,0%,100%,.05)
-        }
-      }
-
-      > a {
-        display: block;
-        color: #fff;
-        padding: 20px;
-        text-transform: uppercase;
-        font-size: 1rem;
-        text-decoration: none;
-        line-height: 1;
-        position: relative;
-      }
-    }
-  }
+.sidebar_secondary-heading {
+  @include text_style(1rem, $color: $white, $line-height: 1, $text-transform: uppercase);
+  display: block;
+  padding: 20px;
 }
 
 .sidebar_secondary-submenu {
+  > ul > li { border-top: 1px solid rgba(0,0,0,.45); } // Add depth effect to submenu items.
+}
 
-  > ul {
-    padding-left: 0;
-    width: auto!important;
+.sidebar_secondary-submenu-item {
+  @include text_style(.875rem, $color: $white, $text-transform: uppercase);
+  display: block;
+  background-color: rgba(0,0,0,.25);
+  border-top: 1px solid hsla(0,0%,100%,.05); // Add depth effect to submenu items.
+  padding: 15px 20px;
 
-    > li {
-      border-top: 1px solid rgba(0,0,0,.45);
-
-      > a {
-        border-top: 1px solid hsla(0,0%,100%,.05);
-        display: block;
-        color: #fff;
-        background-color: rgba(0,0,0,.25);
-        padding: 15px 20px;
-        text-transform: uppercase;
-        font-size: .875rem;
-        text-decoration: none;
-        position: relative;
-
-        &:before {
-          content: "\BB";
-          padding-right: 15px;
-        }
-      }
-    }
+  // Add double arrow icon with space.
+  &:before {
+    content: "\BB";
+    padding-right: 15px;
   }
 }
+
+// Change heading background colors when hovering over list.
+.sidebar_primary > ul > li,
+.sidebar_secondary > ul > li {
+  &:hover { > a { background-color: hsla(0,0%,100%,.05) } }
+}
+
+@include setup_sidebar_icons($services); // Set up sidebar icon classes.
