@@ -35,9 +35,6 @@ function toggleSidebar() {
 
   // Animate burger button.
   $(burger).toggleClass('active');
-  
-  // Change visibility of sidebar.
-  //sidebar.style.visibility = sidebarVisible ? "visible" : "hidden";
 
   // Move page contents.
   content.classList.toggle('active');
