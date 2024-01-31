@@ -811,7 +811,12 @@ template {
   box-sizing: border-box;
 }
 
-/* line 5, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
+/* line 6, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
+html, body, .content, .content_wrapper {
+  height: 100%;
+}
+
+/* line 10, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
 body {
   font-family: Poppins,sans-serif;
   font-size: 1rem;
@@ -821,13 +826,13 @@ body {
   overflow: hidden;
 }
 
-/* line 14, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
+/* line 19, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* line 19, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
+/* line 24, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
 ul {
   list-style: none;
   padding: 0;
@@ -1438,11 +1443,10 @@ ul {
 
 /* line 40, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_containers.scss */
 .content_wrapper {
-  height: 100vh;
   overflow-x: hidden;
 }
 
-/* line 46, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_containers.scss */
+/* line 45, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_containers.scss */
 .content_overlay {
   display: none;
   height: 100%;
