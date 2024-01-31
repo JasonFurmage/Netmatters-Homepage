@@ -1393,7 +1393,7 @@ ul {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 2;
+  z-index: 100;
   cursor: pointer;
 }
 
@@ -3087,6 +3087,16 @@ footer ul {
   .header_big-search-wrapper {
     margin-left: 20px;
   }
+}
+
+/* line 95, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_header.scss */
+#js-sticky-header {
+  position: fixed;
+  width: 100%;
+  top: -209px;
+  background-color: #fff;
+  transition: transform 0.2s ease-in-out;
+  z-index: 3;
 }
 
 /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_sidebar.scss */
