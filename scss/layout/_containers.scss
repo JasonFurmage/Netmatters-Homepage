@@ -37,13 +37,13 @@
     }
 }
 
-.content-wrapper {
+.content_wrapper {
     height: 100vh; // Show vertical scroll bar.
     overflow-x: hidden; // Hide horizontal scroll bar.
 }
 
 // Dim page contents.
-.overlay {
+.content_overlay {
     display: none;
     @extend %fill-container;
     height: 100%;
@@ -52,4 +52,3 @@
     z-index: 100;
     cursor: pointer;
 }
-

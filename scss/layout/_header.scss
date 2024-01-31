@@ -45,7 +45,7 @@
     padding: 7px 0px;
 
     a {
-        &.contact-btn {
+        &.-contact {
             margin-left: 20px; // Add left margin to contact button.
         }
     }
@@ -98,5 +98,5 @@
     top: -209px; // Position off screen initially.
     background-color: $white;
     transition: transform 0.2s ease-in-out;
-    z-index: 3; // Make sure it's ontop of other elements.
+    z-index: 11; // Make sure it's ontop of other elements.
 }

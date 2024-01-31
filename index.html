@@ -240,8 +240,8 @@
     <!-- Content -->
 
     <div class="content" id="js-content">
-        <div class="content-wrapper" id="js-content-wrapper">
-            <div class="overlay" id="js-overlay" onclick="toggleSidebar()"></div>
+        <div class="content_wrapper" id="js-content-wrapper">
+            <div class="content_overlay" id="js-overlay" onclick="toggleSidebar()"></div>
 
             <!-- Header -->
 
@@ -257,11 +257,11 @@
                                 <a href=""><span class="icon-phone_in_talk"></span></a>
                             </div>
                             <div class="header_actions">
-                                <a href="#" target="_blank" class="header-button support-btn md-lg-only" rel="noopener noreferrer">
+                                <a href="#" target="_blank" class="header-button -support md-lg-only" rel="noopener noreferrer">
                                     <span class="icon-mouse"></span>
                                     Support
                                 </a>
-                                <a href="#" target="_blank" class="header-button contact-btn md-lg-only" rel="noopener noreferrer">
+                                <a href="#" target="_blank" class="header-button -contact md-lg-only" rel="noopener noreferrer">
                                     <span class="icon-paperplane"></span>
                                     Contact
                                 </a>
@@ -1520,10 +1520,35 @@
         </div>
     </div>
 
-    <!-- Cookies Consent Button -->
+    <!-- Cookies -->
 
-    <button type="button" class="cookies_consent-button">Manage Consent</button>
+    <div class="cookies_overlay" id="js-cookies-overlay">
+        <div class="cookies_popup">
+            <div class="cookies_popup-header">
+                <h3>Cookies Policy</h3>
+            </div>
+            <div class="cookies_popup-body">
+                <p>
+                    Our website uses cookies. This helps us provide you with a good experience on our website. 
+                    To see what cookies we use and what they do, and to opt-in on non-essential cookies click "change settings". 
+                    For a detailed explanation, click on "<a href="/privacy-policy">Privacy Policy</a>" 
+                    otherwise click "Accept Cookies" to enter.
+                </p>
+            </div>
+            <div class="cookies_popup-footer">
+                <div class="cookies_popup-buttons">
+                    <div class="cookies_popup-button-wrapper">
+                        <a class="cookies-popup-button -settings">Change Settings</a>
+                    </div>
+                    <div class="cookies_popup-button-wrapper">
+                        <a class="cookies-popup-button -accept" onclick="setCookiesPreference()">Accept Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <button type="button" class="cookies-consent-button" onclick="showCookiesPopup()">Manage Consent</button>
 
     <!-- JavaScript -->
     <script src="js/jquery-3.7.1.min.js"></script>

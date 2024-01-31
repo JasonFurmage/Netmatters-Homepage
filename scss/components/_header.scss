@@ -110,10 +110,10 @@
     }
 }
 
-.support-btn {
+.-support {
     @include button_style($background-color: #4183d7, $hover-color: #2a6ec6);
 }
 
-.contact-btn {
+.-contact {
     @include button_style($background-color: #999aa2, $hover-color: #84858f);
 }

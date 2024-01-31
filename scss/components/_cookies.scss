@@ -1,0 +1,32 @@
+.cookies-consent-button {
+    @include text_style(.8rem, $color: $white, $line-height: 22px, $font-weight: 600);
+    position: fixed; // Position button outside of document flow.
+    z-index: 99; // Stay on top.
+    bottom: 0;
+    padding: 0 10px;
+    background: $cookies-btn-color;
+    border: solid $cookies-btn-color;
+    border-width: 1px 1px 0 0;
+    border-top-right-radius: 10px; // Give top right of button a rounded corner.
+    cursor: pointer;
+
+    // Highlight button during hover state.
+    &:hover {
+        background-color: $cookies-btn-hv-color
+    }
+}
+
+.cookies-popup-button {
+    @extend %button;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.-settings {
+    @include button_style($white, $background-color: #999aa2, $hover-color: #84858f);
+}
+
+.-accept {
+    @include button_style($white, $background-color: #926fb1, $hover-color: #7e57a0);
+}

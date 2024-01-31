@@ -1,17 +1,77 @@
-.cookies_consent-button {
-    @include text_style(.8rem, $color: $white, $line-height: 22px, $font-weight: 600);
-    position: fixed; // Position button outside of document flow.
-    z-index: 99; // Stay on top.
-    bottom: 0;
-    padding: 0 10px;
-    background: $cookies-btn-color;
-    border: solid $cookies-btn-color;
-    border-width: 1px 1px 0 0;
-    border-top-right-radius: 10px; // Give top right of button a rounded corner.
-    cursor: pointer;
+.cookies_overlay {
+    @include flex_style($align-items: center, $justify-content: center); // Center popup.
+    @extend %fill-container;
+    display: none; // Hide by default.
+    position: fixed;
+    padding: 30px;
+    background-color: rgba(0,0,0,.7); // Dim effect.
+    overflow-x: hidden;
+    overflow-y: auto; // Allow scrolling.
+    z-index: 100; // Place abovep age contents.
+}
 
-    // Highlight button during hover state.
-    &:hover {
-        background-color: $cookies-btn-hv-color
+.cookies_popup {
+    position: relative;
+    width: auto;
+    background-color: $white;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    margin: auto;
+    background-clip: padding-box;
+
+    // Force width to 600px and change box shadow on screens at least 768px wide.
+    @include mq_min(small) { 
+        width: 600px;
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
     }
+}
+
+.cookies_popup-header {
+    border-bottom: 1px solid #e5e5e5; // Add divider below header.
+    padding: 15px 20px;
+
+    h3 {
+        @include text_style(1.625rem, $color: $dark-grey);
+        font-weight: 400;
+        margin: 0;
+    }
+}
+
+.cookies_popup-body {
+    padding: 20px;
+
+    p {
+        line-height: 1.875rem;
+        margin: 0 0 25px;
+
+        a { color: $dark-grey; } // Change link color.
+    }
+}
+
+.cookies_popup-footer {
+    border-top: 1px solid #e5e5e5; // Add divider above footer.
+    padding: 19px 20px 20px;
+}
+
+.cookies_popup-buttons {
+    @include flex_style($flex-wrap: wrap);
+    margin: 0 -15px;
+
+    // Add bottom margin to first button on screens up to 767px wide.
+    @include mq_max(small) {
+        .cookies_popup-button-wrapper {
+            &:nth-child(1) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.cookies_popup-button-wrapper {
+    width: 100%;
+    padding: 0 15px;
+
+    // Put buttons on same line on screen at least 768px wide.
+    @include mq_min(small) { width: 50%; }
 }
