@@ -3223,7 +3223,7 @@ footer ul {
 #js-sticky-header {
   position: fixed;
   width: 100%;
-  top: -209px;
+  top: 0;
   background-color: #fff;
   transition: transform 0.2s ease-in-out;
   z-index: 11;

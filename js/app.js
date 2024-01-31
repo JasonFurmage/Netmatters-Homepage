@@ -54,7 +54,7 @@ contentWrapper.addEventListener('scroll', function() {
 
   if (scrollTop > lastScrollTop) { // Scrolling down...
 
-    clonedHeader.style.transform = 'translateY(0)'; // Hide cloned header with animation when scrolling down.
+    clonedHeader.style.transform = 'translateY(-100%)'; // Hide cloned header with animation when scrolling down.
 
     // Remove cloned header from content wrapper.
     scrollTimer = setTimeout(function() {
@@ -68,7 +68,7 @@ contentWrapper.addEventListener('scroll', function() {
 
     // Show cloned header with animation.
       scrollTimer = setTimeout(function() {
-        clonedHeader.style.transform = 'translateY(209px)';
+        clonedHeader.style.transform = 'translateY(0)';
         clonedHeader.style.opacity = '1';
       }, 200);
 
