@@ -144,6 +144,20 @@ footer {
   z-index: -1;
 }
 
+@media (max-width: 404px) {
+  /* line 57, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
+  .banner_item {
+    height: 598px;
+  }
+}
+
+@media (max-width: 319px) {
+  /* line 57, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
+  .banner_item {
+    height: 636px;
+  }
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */

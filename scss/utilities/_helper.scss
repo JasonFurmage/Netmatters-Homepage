@@ -41,7 +41,7 @@
 }
 
 
-// Stupid bug fixes...
+// Temporary bug fixes...
 
 // Required so you can scroll to bottom of page on iOS devices.
 html, body, .content, .content_wrapper  {
@@ -51,4 +51,10 @@ html, body, .content, .content_wrapper  {
 // Required so scroll bar stays in front of footer on iOS devices.
 footer {
     z-index: -1;
+}
+
+// Resize banner items on small screens so dots stay below button.
+.banner_item {
+    @media (max-width: 404px) { height: 598px; }
+    @media (max-width: 319px) { height: 636px; }
 }
