@@ -39,3 +39,16 @@
         color: #d24d57;
     }
 }
+
+
+// Stupid bug fixes...
+
+// Required so you can scroll to bottom of page on iOS devices.
+html, body, .content, .content_wrapper  {
+    height: 100%;
+}
+
+// Required so scroll bar stays in front of footer on iOS devices.
+footer {
+    z-index: -1;
+}

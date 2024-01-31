@@ -134,6 +134,16 @@
   color: #d24d57;
 }
 
+/* line 47, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
+html, body, .content, .content_wrapper {
+  height: 100%;
+}
+
+/* line 52, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
+footer {
+  z-index: -1;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -811,12 +821,7 @@ template {
   box-sizing: border-box;
 }
 
-/* line 6, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
-html, body, .content, .content_wrapper {
-  height: 100%;
-}
-
-/* line 10, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
+/* line 5, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
 body {
   font-family: Poppins,sans-serif;
   font-size: 1rem;
@@ -826,13 +831,13 @@ body {
   overflow: hidden;
 }
 
-/* line 19, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
+/* line 14, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* line 24, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
+/* line 19, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/base/_base.scss */
 ul {
   list-style: none;
   padding: 0;
