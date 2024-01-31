@@ -50,7 +50,7 @@ contentWrapper.addEventListener('scroll', function() {
         clonedHeader.style.opacity = '1';
       }, 200);
 
-    } if (scrollTop === 0) { // Scroll bar at top of the page.
+    } if (scrollTop < 1) { // Scroll bar at top of the page.
 
       clonedHeader.style.opacity = '0'; // Hide cloned header immediately without animation.
 
