@@ -48,11 +48,6 @@ html, body, .content, .content_wrapper  {
     height: 100%;
 }
 
-// Required so scroll bar stays in front of footer on iOS devices.
-footer {
-    z-index: -1;
-}
-
 // Resize banner items on small screens so dots stay below button.
 .banner_item {
     @media (max-width: 404px) { height: 598px; }

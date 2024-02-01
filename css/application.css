@@ -139,20 +139,15 @@ html, body, .content, .content_wrapper {
   height: 100%;
 }
 
-/* line 52, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
-footer {
-  z-index: -1;
-}
-
 @media (max-width: 404px) {
-  /* line 57, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
+  /* line 52, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
   .banner_item {
     height: 598px;
   }
 }
 
 @media (max-width: 319px) {
-  /* line 57, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
+  /* line 52, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_helper.scss */
   .banner_item {
     height: 636px;
   }
@@ -1671,12 +1666,11 @@ ul {
 footer {
   font-size: 0.8125rem;
   color: #fff;
-  position: relative;
   background-color: #323544;
   padding: 27px 0 0;
 }
 
-/* line 8, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 7, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 footer h4 {
   font-size: 1rem;
   font-weight: 400;
@@ -1684,7 +1678,7 @@ footer h4 {
   margin-bottom: 26px;
 }
 
-/* line 14, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 13, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 footer ul {
   line-height: 1.375rem;
 }
@@ -1696,50 +1690,50 @@ footer ul {
   }
 }
 
-/* line 24, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 23, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-/* line 29, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 28, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_company h4 {
   margin-top: 20px;
 }
 
 @media (min-width: 1260px) {
-  /* line 28, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+  /* line 27, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
   .footer_company {
     width: 400px;
   }
 }
 
-/* line 39, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 38, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_company-logo {
   width: 250px;
 }
 
-/* line 42, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 41, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_company-logo img {
   width: 100%;
 }
 
 @media (min-width: 480px) {
-  /* line 39, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+  /* line 38, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
   .footer_company-logo {
     width: 320px;
   }
 }
 
-/* line 52, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 51, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_company-social {
   display: flex;
   flex-direction: wrap;
   margin-bottom: 30px;
 }
 
-/* line 57, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 56, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_company-social-icon {
   font-size: 26px;
   text-align: center;
@@ -1749,14 +1743,14 @@ footer ul {
   margin-right: 7px;
 }
 
-/* line 66, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 65, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_company-social-icon span {
   position: relative;
   top: 4px;
 }
 
 @media (max-width: 1259px) {
-  /* line 57, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+  /* line 56, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
   .footer_company-social-icon {
     margin-right: 10px;
     margin-bottom: 10px;
@@ -1764,39 +1758,39 @@ footer ul {
 }
 
 @media (max-width: 480px) {
-  /* line 57, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+  /* line 56, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
   .footer_company-social-icon {
     width: 35%;
   }
 }
 
-/* line 83, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 82, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_company-social-icon:nth-child(1):hover {
   background-color: #3b5998;
 }
 
-/* line 84, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 83, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_company-social-icon:nth-child(2):hover {
   background-color: #0077b5;
 }
 
-/* line 85, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 84, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_company-social-icon:nth-child(3):hover {
   background-color: #00aced;
 }
 
-/* line 86, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 85, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_company-social-icon:nth-child(4):hover {
   background-color: #d93175;
 }
 
-/* line 89, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 88, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_links {
   margin: 0px -15px;
 }
 
 @media (max-width: 991px) {
-  /* line 89, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+  /* line 88, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
   .footer_links {
     display: flex;
     flex-wrap: wrap;
@@ -1804,35 +1798,35 @@ footer ul {
 }
 
 @media (min-width: 768px) {
-  /* line 89, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+  /* line 88, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
   .footer_links {
     display: flex;
     flex-grow: 1;
   }
 }
 
-/* line 104, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 103, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_links-menu {
   width: 100%;
   padding: 0px 15px;
   margin-bottom: 30px;
 }
 
-/* line 109, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+/* line 108, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
 .footer_links-menu h4 {
   line-height: 1.1;
   margin-top: 0;
 }
 
 @media (min-width: 768px) {
-  /* line 104, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+  /* line 103, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
   .footer_links-menu {
     width: 50%;
   }
 }
 
 @media (min-width: 1260px) {
-  /* line 104, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
+  /* line 103, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_footer.scss */
   .footer_links-menu {
     margin-bottom: 40px;
   }
