@@ -33,6 +33,23 @@ $(document).ready(function(){
     });
 });
 
+function initializeSlickCarousel(selector) {
+  $(selector).slick({
+    autoplay: true,
+    autoplaySpeed: 3500,
+    speed: 250,
+    variableWidth: true,
+    draggable: false,
+    swipe: false
+  });
+}
+
+// Call the function for carousel2
+initializeSlickCarousel('.carousel2');
+
+// Call the function for carousel3
+initializeSlickCarousel('.carousel3');
+
 
 /* Sticky Header
    ========================================================================== */
