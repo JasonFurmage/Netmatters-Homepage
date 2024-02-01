@@ -957,9 +957,10 @@ ul {
 /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_clients.scss */
 .clients-description-button {
   font-size: 1rem;
+  margin-top: 11px;
 }
 
-/* line 6, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_clients.scss */
+/* line 7, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_clients.scss */
 .clients-arrow {
   position: absolute;
   left: 50%;
@@ -967,7 +968,7 @@ ul {
   margin-left: -36px;
 }
 
-/* line 14, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_clients.scss */
+/* line 15, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_clients.scss */
 .clients-arrow:after {
   content: "";
   margin: auto;
@@ -975,6 +976,58 @@ ul {
   border-color: #333645 transparent transparent;
   border-style: solid;
   border-width: 35px 36px 0;
+}
+
+/* line 25, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_clients.scss */
+.-ashcroft, .-traveller {
+  color: #fff;
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+
+/* line 27, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_mixins.scss */
+.-ashcroft:hover, .-traveller:hover {
+  background-color: #7e57a0;
+  border-color: #7e57a0;
+}
+
+/* line 29, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_clients.scss */
+.-searles, .-sweetzy, .-gdst {
+  color: #fff;
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+
+/* line 27, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_mixins.scss */
+.-searles:hover, .-sweetzy:hover, .-gdst:hover {
+  background-color: #26ab5f;
+  border-color: #26ab5f;
+}
+
+/* line 33, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_clients.scss */
+.-swan {
+  color: #fff;
+  background-color: #67809f;
+  border-color: #67809f;
+}
+
+/* line 27, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_mixins.scss */
+.-swan:hover {
+  background-color: #566c88;
+  border-color: #566c88;
+}
+
+/* line 37, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_clients.scss */
+.-guilding {
+  color: #fff;
+  background-color: #4183d7;
+  border-color: #4183d7;
+}
+
+/* line 27, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_mixins.scss */
+.-guilding:hover {
+  background-color: #2a6ec6;
+  border-color: #2a6ec6;
 }
 
 /* line 5, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_latest-news.scss */
@@ -1106,6 +1159,11 @@ ul {
 /* line 56, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_carousel.scss */
 .slick-dotted.slick-slider {
   margin-bottom: 0;
+}
+
+/* line 61, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_carousel.scss */
+.slick-list {
+  overflow: visible;
 }
 
 /* line 1, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/components/_banner.scss */
@@ -1890,97 +1948,6 @@ footer ul {
 }
 
 /* line 31, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
-.clients_row-item:nth-child(1) .clients-description-button {
-  color: #fff;
-  background-color: #926fb1;
-  border-color: #926fb1;
-}
-
-/* line 27, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_mixins.scss */
-.clients_row-item:nth-child(1) .clients-description-button:hover {
-  background-color: #7e57a0;
-  border-color: #7e57a0;
-}
-
-/* line 32, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
-.clients_row-item:nth-child(2) .clients-description-button {
-  color: #fff;
-  background-color: #926fb1;
-  border-color: #926fb1;
-}
-
-/* line 27, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_mixins.scss */
-.clients_row-item:nth-child(2) .clients-description-button:hover {
-  background-color: #7e57a0;
-  border-color: #7e57a0;
-}
-
-/* line 33, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
-.clients_row-item:nth-child(3) .clients-description-button {
-  color: #fff;
-  background-color: #2ecc71;
-  border-color: #2ecc71;
-}
-
-/* line 27, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_mixins.scss */
-.clients_row-item:nth-child(3) .clients-description-button:hover {
-  background-color: #26ab5f;
-  border-color: #26ab5f;
-}
-
-/* line 34, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
-.clients_row-item:nth-child(6) .clients-description-button {
-  color: #fff;
-  background-color: #67809f;
-  border-color: #67809f;
-}
-
-/* line 27, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_mixins.scss */
-.clients_row-item:nth-child(6) .clients-description-button:hover {
-  background-color: #566c88;
-  border-color: #566c88;
-}
-
-/* line 35, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
-.clients_row-item:nth-child(10) .clients-description-button {
-  color: #fff;
-  background-color: #4183d7;
-  border-color: #4183d7;
-}
-
-/* line 27, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_mixins.scss */
-.clients_row-item:nth-child(10) .clients-description-button:hover {
-  background-color: #2a6ec6;
-  border-color: #2a6ec6;
-}
-
-/* line 36, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
-.clients_row-item:nth-child(11) .clients-description-button {
-  color: #fff;
-  background-color: #2ecc71;
-  border-color: #2ecc71;
-}
-
-/* line 27, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_mixins.scss */
-.clients_row-item:nth-child(11) .clients-description-button:hover {
-  background-color: #26ab5f;
-  border-color: #26ab5f;
-}
-
-/* line 37, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
-.clients_row-item:nth-child(13) .clients-description-button {
-  color: #fff;
-  background-color: #2ecc71;
-  border-color: #2ecc71;
-}
-
-/* line 27, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/utilities/_mixins.scss */
-.clients_row-item:nth-child(13) .clients-description-button:hover {
-  background-color: #26ab5f;
-  border-color: #26ab5f;
-}
-
-/* line 40, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
 .clients_row-item-description {
   display: none;
   position: absolute;
@@ -1989,7 +1956,7 @@ footer ul {
   right: -200px;
 }
 
-/* line 50, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
+/* line 41, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
 .clients_row-item-description-box {
   text-align: center;
   color: #fff;
@@ -1999,27 +1966,27 @@ footer ul {
   margin: 0 auto 50px;
 }
 
-/* line 57, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
+/* line 48, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
 .clients_row-item-description-box h3 {
   font-size: 1.125rem;
   padding-bottom: 17px;
   margin: 0;
 }
 
-/* line 63, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
+/* line 54, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
 .clients_row-item-description-box p {
   font-size: 0.8125rem;
   text-align: 1.375rem;
-  margin: 0 0 10px;
+  margin: 0;
 }
 
-/* line 73, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
+/* line 64, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
 .no-description h3 {
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
-/* line 79, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
+/* line 70, ../../../../../Users/netmatters/Documents/GitHub/Netmatters-Homepage/scss/layout/_clients.scss */
 .no-description p {
   display: none;
 }

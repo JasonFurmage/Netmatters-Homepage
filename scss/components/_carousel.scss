@@ -56,3 +56,8 @@
 .slick-dotted.slick-slider {
     margin-bottom: 0;
 }
+
+// Required to show client description box.
+.slick-list {
+    overflow: visible;
+}

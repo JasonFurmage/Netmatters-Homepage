@@ -26,15 +26,6 @@
             display: block;
         }
     }
-
-    // Set button background and hover colors for description boxes.
-    &:nth-child(1) { .clients-description-button { @include button_style($white, #926fb1, #7e57a0); } }
-    &:nth-child(2) { .clients-description-button { @include button_style($white, #926fb1, #7e57a0); } }
-    &:nth-child(3) { .clients-description-button { @include button_style($white, #2ecc71, #26ab5f); } }
-    &:nth-child(6) { .clients-description-button { @include button_style($white, #67809f, #566c88); } }
-    &:nth-child(10) { .clients-description-button { @include button_style($white, #4183d7, #2a6ec6); } }
-    &:nth-child(11) { .clients-description-button { @include button_style($white, #2ecc71, #26ab5f); } }
-    &:nth-child(13) { .clients-description-button { @include button_style($white, #2ecc71, #26ab5f); } }
 }
 
 .clients_row-item-description {
@@ -63,7 +54,7 @@
     p {
         @include text_style(.8125rem, 1.375rem);
         @extend %underline-links-on-hover;
-        margin: 0 0 10px;
+        margin: 0;
     }
 }
 

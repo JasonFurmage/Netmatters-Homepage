@@ -1,6 +1,7 @@
 .clients-description-button {
     @extend %button;
     font-size: 1rem;
+    margin-top: 11px;
 }
 
 .clients-arrow {
@@ -19,4 +20,20 @@
         border-style: solid;
         border-width: 35px 36px 0;
     }
+}
+
+.-ashcroft, .-traveller {
+    @include button_style($white, #926fb1, #7e57a0);
+}
+
+.-searles, .-sweetzy, .-gdst {
+    @include button_style($white, #2ecc71, #26ab5f);
+}
+
+.-swan {
+    @include button_style($white, #67809f, #566c88);
+}
+
+.-guilding {
+    @include button_style($white, #4183d7, #2a6ec6);
 }
