@@ -43,7 +43,7 @@
 
 // Temporary bug fixes...
 
-// Required so you can scroll to bottom of page on iOS devices.
+// Required for scrolling.
 html, body, .content, .content_wrapper  {
     height: 100%;
 }

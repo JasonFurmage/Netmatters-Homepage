@@ -81,7 +81,12 @@ contentWrapper.addEventListener('scroll', function() {
   } else if (scrollTop > originalHeader.clientHeight) { // Scrolling up whilst below original header.
 
     // Add cloned header to content wrapper.
-    if (!contentWrapper.contains(clonedHeader)) { contentWrapper.appendChild(clonedHeader); }
+    if (!contentWrapper.contains(clonedHeader)) { 
+      contentWrapper.appendChild(clonedHeader);
+
+      // Subtract scroll bar width from cloned header width to prevent cloned header from overlapping scrollbar.
+      clonedHeader.style.width = `calc(100% - ${getScrollBarWidth()}px)`;
+    }
 
     // Show cloned header with animation.
       scrollTimer = setTimeout(function() {
@@ -100,8 +105,15 @@ contentWrapper.addEventListener('scroll', function() {
   }
 
   lastScrollTop = scrollTop;
-
 });
+
+// Get scroll bar width (will be 0 if there is no scroll bar).
+function getScrollBarWidth () {
+  var $outer = $('<div>').css({visibility: 'hidden', width: 100, overflow: 'scroll'}).appendTo('body'),
+      widthWithScroll = $('<div>').css({width: '100%'}).appendTo($outer).outerWidth();
+  $outer.remove();
+  return 100 - widthWithScroll;
+};
 
 
 /* Toggle Side Menu
