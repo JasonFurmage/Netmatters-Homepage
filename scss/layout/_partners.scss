@@ -7,7 +7,7 @@
 }
 
 .partners_row-item {
-    @include flex_style($align-items: center); // Center so logos are not stretched.
+    @include flex_style($align-self: center); // Center logos.
     position: relative;
 
     // Add gap between logos.

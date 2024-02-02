@@ -9,12 +9,13 @@
 }
 
 // Set common flex properties.
-@mixin flex_style($flex-direction: null, $flex-wrap: null, $flex-grow: null, $align-items: null, $justify-content: null) {
+@mixin flex_style($flex-direction: null, $flex-wrap: null, $flex-grow: null, $align-items: null, $align-self: null, $justify-content: null) {
     display: flex;
     flex-direction: $flex-direction;
     flex-wrap: $flex-wrap;
     flex-grow: $flex-grow;
     align-items: $align-items;
+    align-self: $align-self;
     justify-content: $justify-content;
 }
 
