@@ -18,4 +18,14 @@ try {
    exit; 
 }
 
-echo "Connected to the database";
+//echo "Connected to the database";
+
+try {
+    $results = $db->query("SELECT * FROM news");
+    //echo "Retrieved results";
+} catch (Exception $e) {
+    echo "Query failed";
+    echo $e->getMessage();
+}
+
+$news = $results->fetchAll(PDO::FETCH_ASSOC);
