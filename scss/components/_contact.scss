@@ -1,0 +1,6 @@
+.accordion-panel {
+    max-height: 0;
+    background-color: $white;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}

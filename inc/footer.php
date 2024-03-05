@@ -122,6 +122,7 @@
     <!-- JavaScript -->
     <script src="js/jquery/jquery-3.7.1.min.js"></script>
     <script src="js/slick/slick.min.js"></script>
+    <script src="js/accordion.js"></script>
     <script src="js/cookies.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/sidebar.js"></script>
