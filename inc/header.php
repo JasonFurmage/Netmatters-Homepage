@@ -251,7 +251,7 @@
                     <div class="container">
                         <div class="header_row">
                             <div class="header_logo">
-                                <a href=""><img src="assets/images/f-logo.png" alt="Netmatters"></a>
+                                <a href="index.php"><img src="assets/images/f-logo.png" alt="Netmatters"></a>
                             </div>
                             <div class="header-phone-button">
                                 <a href=""><span class="icon-phone_in_talk"></span></a>

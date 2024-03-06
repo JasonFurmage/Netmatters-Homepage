@@ -4,10 +4,25 @@
 
 .contact_wrapper {
     margin: 0px -15px;
+
+    display: flex;
+    flex-direction: column;
+
+    @include mq_min(large) {
+        flex-direction: row-reverse;
+    }
 }
 
 .contact_section {
     padding: 0px 15px;
+
+    @include mq_min(large) {
+        width: 33.3%;
+
+        &:nth-child(2) {
+            width: 66.6%;
+        }
+    }
 }
 
 .contact_info {    
@@ -40,5 +55,79 @@
 }
 
 .contact_form {
-    
+    background-color: #e6e7e9;
+    border-radius: 10px;
+    padding: 30px;
+
+    label {
+        @include text_style($font-weight: 600, $color: $dark-grey);
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+}
+
+.contact_form-inputs-wrapper {
+    @include flex_style($flex-wrap: wrap); // Make text fields wrap to new line on smaller screens.
+    margin: 0px -15px;
+}
+
+.contact_form-input {
+    width: 100%;
+    padding: 0px 15px;
+
+    // Put text fields on same line on screens at least 992px wide.
+    @include mq_min(medium) {
+        width: 50%;
+    }
+}
+
+.contact_form-group {
+    margin-bottom: 15px;
+}
+
+.contact_form-marketing {
+    display: flex!important; // Overwrite default style so checkbox and marketing text appear on same line.
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.contact_form-checkbox-wrapper {
+    // Create styled checkbox.
+    display: inline-block;
+    height: 32px;
+    min-width: 32px;
+    border: 3px solid $dark-grey;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+
+.contact_form-text-wrapper {
+    margin-bottom: 15.5px;
+
+    a {
+        text-decoration: underline; // Show underline for 'privacy policy' text.
+    }
+}
+
+.contact_form-recaptcha-wrapper {
+    color: #333645;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: -10px;
+}
+
+.contact_form-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    small {
+        color: #333645;
+        font-size: 85%;
+
+        span {
+            color: #a94442;
+        }
+    }
 }

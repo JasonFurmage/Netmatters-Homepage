@@ -32,15 +32,61 @@ include("inc/header.php");
                 </div>
             </div>
             <div class="contact_section">
-                <div class="contact_form">
-                    <form action="#" method="POST" accept-charset="UTF-8">
-                        
-                    </form>
+                <form action="#" method="POST" id="contact-form" class="contact_form" accept-charset="UTF-8">
+                    <div class="contact_form-inputs-wrapper">
+                        <div class="contact_form-input">
+                            <div class="contact_form-group">
+                                <label for="contact-name" class="required">Your Name</label>
+                                <input class="contact-textfield" id="contact-name" name="name" type="text">
+                            </div>
+                        </div>
+                        <div class="contact_form-input">
+                            <div class="contact_form-group">
+                                <label for="contact-email" class="required">Company Name</label>
+                                <input class="contact-textfield" id="contact-company" name="company" type="text">
+                            </div>
+                        </div>
+                        <div class="contact_form-input">
+                                <div class="contact_form-group">
+                                    <label for="contact-name" class="required">Your Email</label>
+                                    <input class="contact-textfield" id="contact-email" name="email" type="text">
+                                </div>
+                            </div>
+                            <div class="contact_form-input">
+                                <div class="contact_form-group">
+                                    <label for="contact-name" class="required">Your Telephone Number</label>
+                                    <input class="contact-textfield" id="contact-telephone" name="telephone" type="text">
+                                </div>
+                        </div>
+                    </div>
+                    <div class="contact_form-group">
+                        <label for="contact-email" class="required">Message</label>
+                        <textarea class="contact-textarea" id="message" name="message" cols="50" rows="10">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+                    </div>
+                    <div class="contact_form-group">
+                        <label class="contact_form-marketing">
+                            <input type="checkbox" class="contact-checkbox">
+                            <span class="contact_form-checkbox-wrapper">
+                            </span>
+                            <span class="contact_form-text-wrapper">
+                                Please tick this box if you wish to receive marketing information from us.
+                                Please see our <a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a> for more information on how we keep your data safe.
+                            </span>
+                        </label>
+                    </div>
+                    <div class="contact_form-recaptcha-wrapper">
+                        <span>This site is protected by reCAPTCHA and the Google <a href="#" target="_blank"><u>Privacy Policy</u></a> and <a href="#" target="_blank" rel="noopener noreferrer"><u>Terms of Service</u></a> apply.</span>
+                    </div>
+                    <div class=contact_form-button-wrapper>
+                        <button name="submit" class="contact-subscribe-button">Send Enquiry</button>
+                        <small><span>*</span> Fields Required</small>
+                    </div>
+                </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 
 <?php include("inc/newsletter.php"); ?>
 <?php include("inc/footer.php"); ?>
