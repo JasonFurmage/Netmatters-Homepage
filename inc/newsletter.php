@@ -29,7 +29,7 @@
                     </span>
                 </label>
             </div>
-            <button name="submit" class="form-button">Subscribe</button>
+            <button name="submit" class="form-button" disabled>Subscribe</button>
         </form>
     </div>
 </div>
