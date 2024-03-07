@@ -3,7 +3,7 @@
 // Include Composer's autoload to manage dependencies and load environment variables from .env for configuration
 require_once realpath(__DIR__ . "/../vendor/autoload.php");
 use Dotenv\Dotenv;
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../', ['env.env']);
 $dotenv->load();
 
 // Get enviornment variables for connecting to database.
