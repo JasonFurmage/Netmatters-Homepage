@@ -127,5 +127,6 @@
     <script src="js/carousel.js"></script>
     <script src="js/sidebar.js"></script>
     <script src="js/sticky.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 </html>

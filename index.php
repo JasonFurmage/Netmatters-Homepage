@@ -2,7 +2,8 @@
 
 $pageTitle = "Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters";
 
-include("inc/connection.php");
+include("inc/articles.php");
+include("inc/functions.php");
 include("inc/header.php");
 
 ?>
@@ -360,37 +361,7 @@ include("inc/header.php");
                         </div>
                         <div class="latest-news_articles">
 
-                        <?php foreach ($news as $article): ?>
-                            <div class="latest-news_article-wrapper">
-                                <div class="latest-news_article">
-                                    <a href="#"></a>
-                                    <div class="latest-news_article-image">
-                                        <div class="latest-news-article-tag"><a href=""><?= htmlspecialchars($article["category"]) ?></a></div>
-                                        <img src="<?= htmlspecialchars($article["image"]) ?>" alt="">
-                                    </div>
-                                    <div class="latest-news_article-text">
-                                        <h3>
-                                            <strong><?= htmlspecialchars($article["title"]) ?></strong>
-                                            <?php if(empty($article['read_time'])): ?>
-                                            <BR>&nbsp;
-                                            <?php endif; ?>
-                                            <span class="latest-news_article-readtime"><?= htmlspecialchars($article["read_time"]) ?></span>
-                                        </h3>
-                                        <p><?= htmlspecialchars($article["body"]) ?></p>
-                                        <a class="latest-news-article-button" href="#"> Read More </a>
-                                            <div class="latest-news_article-author">
-                                                <div class="latest-news_article-author-avatar">
-                                                    <img src="<?= htmlspecialchars($article["author_image"]) ?>" alt="Netmatters">
-                                                </div>
-                                                <div class="latest-news_article-author-details">
-                                                    <strong>Posted by <?= htmlspecialchars($article["author"]) ?> </strong>
-                                                    <br><?= date("jS F Y", strtotime(htmlspecialchars($article["date"]))) ?>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
+                        <?php displayNewsArticles($articles) ?>
 
                         </div>
                         <div class="latest-news_small-heading xs-only">
@@ -588,7 +559,7 @@ include("inc/header.php");
                     </div>
                 </div>
 
-                <?php include("inc/newsletter.php"); ?>
+            <?php include("inc/newsletter.php"); ?>
 
             </main>
 

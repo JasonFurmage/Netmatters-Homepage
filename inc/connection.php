@@ -13,19 +13,8 @@ try {
     $db = new PDO("mysql:host=$dbHost;dbname=$dbName", "$dbUserName", "$dbPassword");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (Exception $e) {
-   echo "Unable to connect";
-   echo $e->getMessage();
-   exit; 
+    echo "Unable to connect to database: " . $e->getMessage();
+    exit; 
 }
 
-//echo "Connected to the database";
-
-try {
-    $results = $db->query("SELECT * FROM news");
-    //echo "Retrieved results";
-} catch (Exception $e) {
-    echo "Query failed";
-    echo $e->getMessage();
-}
-
-$news = $results->fetchAll(PDO::FETCH_ASSOC);
+?>

@@ -31,9 +31,8 @@
 
 .contact-checkbox {
     position: fixed;
-    opacity: 0; // Hide checkbox.
+    opacity: 0;
 
-    // When checked insert custom checkmark in wrapper.
     &:checked + .contact_form-checkbox-wrapper:before {
         content: "✓";
         @include flex_style($align-items: center, $justify-content: center);

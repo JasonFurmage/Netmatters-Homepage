@@ -6,7 +6,7 @@
 /* Other
    ========================================================================== */
 /* line 1, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/utilities/_placeholders.scss */
-.cookies-popup-button, .newsletter-subscribe-button, .contact-subscribe-button, .clients-description-button, .latest-news-article-button, .welcome-button, .services-item-button, .banner-item-button, .header-button, .burger-button {
+.cookies-popup-button, .newsletter-subscribe-button, .contact-subscribe-button, .clients-description-button, .latest-news-article-button, .welcome-button, .services-item-button, .banner-item-button, .header-button, .burger-button, .office-button {
   display: inline-flex;
   align-items: center;
   font-size: 1.063rem;
@@ -20,13 +20,13 @@
 }
 
 /* line 13, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/utilities/_placeholders.scss */
-.cookies-popup-button span, .newsletter-subscribe-button span, .contact-subscribe-button span, .clients-description-button span, .latest-news-article-button span, .welcome-button span, .services-item-button span, .banner-item-button span, .header-button span, .burger-button span {
+.cookies-popup-button span, .newsletter-subscribe-button span, .contact-subscribe-button span, .clients-description-button span, .latest-news-article-button span, .welcome-button span, .services-item-button span, .banner-item-button span, .header-button span, .burger-button span, .office-button span {
   margin-right: -4px;
   margin-left: 12px;
 }
 
 /* line 19, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/utilities/_placeholders.scss */
-.cookies-popup-button .burger-button-line, .newsletter-subscribe-button .burger-button-line, .contact-subscribe-button .burger-button-line, .clients-description-button .burger-button-line, .latest-news-article-button .burger-button-line, .welcome-button .burger-button-line, .services-item-button .burger-button-line, .banner-item-button .burger-button-line, .header-button .burger-button-line, .burger-button .burger-button-line {
+.cookies-popup-button .burger-button-line, .newsletter-subscribe-button .burger-button-line, .contact-subscribe-button .burger-button-line, .clients-description-button .burger-button-line, .latest-news-article-button .burger-button-line, .welcome-button .burger-button-line, .services-item-button .burger-button-line, .banner-item-button .burger-button-line, .header-button .burger-button-line, .burger-button .burger-button-line, .office-button .burger-button-line {
   margin-right: 0;
   margin-left: 0;
 }
@@ -134,20 +134,25 @@
   color: #d24d57;
 }
 
-/* line 47, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/utilities/_helper.scss */
+/* line 43, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/utilities/_helper.scss */
+.error {
+  border-color: #d64541 !important;
+}
+
+/* line 51, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/utilities/_helper.scss */
 html, body, .content, .content_wrapper {
   height: 100%;
 }
 
 @media (max-width: 404px) {
-  /* line 52, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/utilities/_helper.scss */
+  /* line 56, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/utilities/_helper.scss */
   .banner_item {
     height: 598px;
   }
 }
 
 @media (max-width: 319px) {
-  /* line 52, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/utilities/_helper.scss */
+  /* line 56, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/utilities/_helper.scss */
   .banner_item {
     height: 636px;
   }
@@ -988,7 +993,7 @@ ul {
   opacity: 0;
 }
 
-/* line 37, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/components/_contact.scss */
+/* line 36, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/components/_contact.scss */
 .contact-checkbox:checked + .contact_form-checkbox-wrapper:before {
   content: "✓";
   display: flex;
@@ -1000,7 +1005,7 @@ ul {
   background-color: #323544;
 }
 
-/* line 47, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/components/_contact.scss */
+/* line 46, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/components/_contact.scss */
 .contact-subscribe-button {
   color: #fff;
   background-color: #333645;
@@ -1013,7 +1018,7 @@ ul {
   border-color: #22242e;
 }
 
-/* line 52, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/components/_contact.scss */
+/* line 51, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/components/_contact.scss */
 .accordion-panel {
   max-height: 0;
   background-color: #fff;
@@ -2069,9 +2074,9 @@ footer ul {
 
 /* line 5, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_wrapper {
-  margin: 0px -15px;
   display: flex;
   flex-direction: column;
+  margin: 0px -15px;
 }
 
 @media (min-width: 1260px) {
@@ -2081,30 +2086,32 @@ footer ul {
   }
 }
 
-/* line 16, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 14, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_section {
   padding: 0px 15px;
 }
 
 @media (min-width: 1260px) {
-  /* line 16, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+  /* line 14, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
   .contact_section {
     width: 33.3%;
   }
-  /* line 22, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+  /* line 20, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
   .contact_section:nth-child(2) {
     width: 66.6%;
   }
 }
 
-/* line 29, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 27, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_info p {
+  font-weight: 600;
   line-height: 1.875rem;
   margin: 0 0 25px;
 }
 
-/* line 33, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 32, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_info p strong {
+  font-weight: 600;
   color: #333645;
 }
 
@@ -2119,20 +2126,20 @@ footer ul {
   margin: 0 0 15px;
 }
 
-/* line 50, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 49, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_info-accordion h4 a {
   color: #333645;
   text-decoration: underline;
 }
 
-/* line 57, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 56, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_form {
   background-color: #e6e7e9;
   border-radius: 10px;
   padding: 30px;
 }
 
-/* line 62, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 61, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_form label {
   font-weight: 600;
   color: #333645;
@@ -2140,39 +2147,39 @@ footer ul {
   margin-bottom: 5px;
 }
 
-/* line 69, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 68, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_form-inputs-wrapper {
   display: flex;
   flex-wrap: wrap;
   margin: 0px -15px;
 }
 
-/* line 74, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 73, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_form-input {
   width: 100%;
   padding: 0px 15px;
 }
 
 @media (min-width: 992px) {
-  /* line 74, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+  /* line 73, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
   .contact_form-input {
     width: 50%;
   }
 }
 
-/* line 84, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 82, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_form-group {
   margin-bottom: 15px;
 }
 
-/* line 88, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 86, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_form-marketing {
   display: flex !important;
   line-height: 32px;
   cursor: pointer;
 }
 
-/* line 94, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 92, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_form-checkbox-wrapper {
   display: inline-block;
   height: 32px;
@@ -2182,41 +2189,277 @@ footer ul {
   margin-right: 20px;
 }
 
-/* line 104, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 101, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_form-text-wrapper {
   margin-bottom: 15.5px;
 }
 
-/* line 107, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 104, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_form-text-wrapper a {
   text-decoration: underline;
 }
 
-/* line 112, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 109, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_form-recaptcha-wrapper {
-  color: #333645;
   font-size: 11px;
   font-weight: 600;
-  margin-bottom: 30px;
-  margin-top: -10px;
+  color: #333645;
+  margin: -10px 0px 30px 0px;
 }
 
-/* line 120, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 116, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_form-button-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* line 125, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+/* line 119, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
 .contact_form-button-wrapper small {
-  color: #333645;
   font-size: 85%;
+  color: #333645;
+}
+
+/* line 123, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.contact_form-button-wrapper small span {
+  color: #a94442;
 }
 
 /* line 129, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
-.contact_form-button-wrapper small span {
+.contact_form-message {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+/* line 136, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.form-error {
+  background-color: #f2dede;
+  border-color: #ebccd1;
   color: #a94442;
+}
+
+/* line 142, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.form-success {
+  color: #fff;
+  border-color: #d6e9c6;
+  background: #2ecc71;
+}
+
+/* line 148, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.form-button {
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: .2;
+  background: transparent;
+}
+
+/* line 164, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.offices {
+  margin-bottom: 40px;
+}
+
+/* line 168, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.offices-wrapper {
+  margin-top: 20px;
+}
+
+/* line 172, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.offices-row {
+  margin: 0px -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 177, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.offices-item {
+  padding: 0px 15px;
+}
+
+@media (min-width: 992px) {
+  /* line 177, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+  .offices-item {
+    width: 50%;
+  }
+}
+
+/* line 189, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.address {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+/* line 200, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.image img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* line 206, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.body {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+/* line 210, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.body h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #333645;
+  line-height: 1.1;
+  margin: 0 0 15px;
+}
+
+/* line 213, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.body h2 a:hover {
+  text-decoration: underline;
+}
+
+/* line 216, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.body p {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  margin: 0 0 15px;
+}
+
+/* line 221, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.body > a {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #926fb1 !important;
+  line-height: 1.1;
+}
+
+/* line 223, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.body > a:hover {
+  text-decoration: underline;
+}
+
+/* line 226, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.body .office-button {
+  margin-top: 15px;
+}
+
+/* line 231, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.map {
+  height: 250px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+/* line 235, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.map img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 241, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.office-button {
+  color: #fff;
+  background-color: #926fb1;
+  border-color: #926fb1;
+  font-size: .9em;
+  padding: 5px 30px;
+}
+
+/* line 28, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/utilities/_mixins.scss */
+.office-button:hover {
+  background-color: #7e57a0;
+  border-color: #7e57a0;
+}
+
+/* line 248, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.contact_heading-wrapper {
+  padding: 50px 0px 0px 0px;
+}
+
+@media (max-width: 991px) {
+  /* line 252, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+  .contact_heading {
+    background-color: #333645;
+    margin-top: -50px;
+    padding: 24px 0px;
+    margin-bottom: 50px;
+  }
+  /* line 260, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+  .contact_heading h1 {
+    color: #fff !important;
+    margin: 0 !important;
+  }
+}
+
+/* line 266, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.contact_heading h1 {
+  margin: 0 0 28px;
+  color: #333645;
+  max-width: 750px;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+/* line 275, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.contact_heading .container:before, .contact_heading .container:after {
+  content: " ";
+  display: table;
+}
+
+/* line 280, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.contact_heading .container:after {
+  clear: both;
+}
+
+/* line 285, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.contact_breadcrumb-wrapper {
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  padding: 14px 0 13px;
+}
+
+@media (max-width: 991px) {
+  /* line 285, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+  .contact_breadcrumb-wrapper {
+    border-top: 1px solid #333645;
+  }
+}
+
+/* line 293, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.contact_breadcrumb {
+  background: none;
+  color: #333645;
+  font-size: .8125rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 2px;
+}
+
+/* line 302, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.contact_breadcrumb li {
+  color: #333645;
+  display: inline-block;
+}
+
+/* line 306, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.contact_breadcrumb li a {
+  color: #333645;
+  font-weight: 800;
+}
+
+/* line 312, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_contact.scss */
+.contact_breadcrumb li + li:before {
+  content: "/\A0";
+  padding: 0 5px;
+  color: #333645;
 }
 
 /* line 1, ../../../../XAMPP/xamppfiles/htdocs/netmatters-homepage/scss/layout/_latest-news.scss */
