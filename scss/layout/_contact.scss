@@ -3,9 +3,11 @@
 }
 
 .contact_wrapper {
+    // Show contact info and form in column.
     @include flex_style(column);
     margin: 0px -15px;
 
+    // Show contact info and form in row on screens at least 1260px wide.
     @include mq_min(large) {
         flex-direction: row-reverse;
     }
@@ -14,9 +16,10 @@
 .contact_section {
     padding: 0px 15px;
 
+    // Divide space between form and contact info sections.
     @include mq_min(large) {
-        &:nth-child(1) { width: 33.3%; }
-        &:nth-child(2) { width: 66.6%; }
+        &:nth-child(1) { width: 33.3%; } // Contact Info
+        &:nth-child(2) { width: 66.6%; } // Form
     }
 }
 
@@ -39,14 +42,19 @@
     }
 }
 
-.panel {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-}
-
 .contact_form {
+    // Styling for contact form background.
     background-color: #e6e7e9;
     border-radius: 10px;
     padding: 30px;
+}
+
+.panel {
+    
+    // Hide accordion text.
+    max-height: 0;
+    overflow: hidden;
+
+    // Animate text being revealed.
+    transition: max-height 0.5s ease-out;
 }

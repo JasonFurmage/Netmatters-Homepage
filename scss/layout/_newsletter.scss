@@ -2,6 +2,7 @@
     background-color: $newsletter-bg-color;
     padding: 50px 0px;
 
+    // Style newsletter sign-up heading.
     h2 {
         @include text_style(2rem, $font-weight: 400, $line-height: 1.1, $color: $dark-grey);
         margin: 0px 0px 15px;

@@ -361,7 +361,7 @@ include("inc/header.php");
             </div>
             <div class="latest-news_articles">
 
-            <?php insertNewsArticles($articles) ?>
+            <?php if (isset($articles)) insertNewsArticles($articles) ?>
 
             </div>
             <div class="latest-news_small-heading xs-only">

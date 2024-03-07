@@ -1,5 +1,6 @@
 <?php
 
+// Loop through articles array and insert HTML.
 function insertNewsArticles($articles) {
     foreach ($articles as $article) {
         echo 
@@ -35,15 +36,16 @@ function insertNewsArticles($articles) {
     }
 }
 
+// Loop through offices array and insert HTML.
 function insertOffices($offices) {
     foreach ($offices as $office) {
     echo 
         '<div class="office">
             <div class="office_info">
-                <div class="office-image">
+                <div class="image">
                     <a href="#"><img src="' . htmlspecialchars($office["image"]) . '" alt="' . htmlspecialchars($office["location"]) . ' Office"></a>
                 </div>
-                <div class="office-address">
+                <div class="address">
                     <h2><a href="#"> ' . htmlspecialchars($office["location"]) . ' Office</a></h2>
                     <p>
                         ' . htmlspecialchars($office["unit"]) . ',
@@ -62,18 +64,23 @@ function insertOffices($offices) {
                     </div>
                 </div>
             </div>
-            <div class="office-map">
+            <div class="office_map">
                     <a href="#"><img src="' . htmlspecialchars($office["map"]) . '" alt="' . htmlspecialchars($office["location"]) . ' Office"></a>
             </div>
         </div>';
     }
 }
 
+// Loop through error messages array and insert HTML.
 function insertFormMessages($errors) {
 
-    $className = count($errors) == 0 ? "form-success" : "form-error";
+    // Choose class based on whether are are any errors.
+    $className = count($errors) == 0 ? "-success" : "-error";
+
+    // Add success message to array if there are no errors.
     if (count($errors) == 0) $errors[] = "Your message has been sent!";
 
+    // Insert HTML.
     foreach ($errors as $message) {
         echo 
             '<div class="form_message ' . $className . '">'
@@ -83,6 +90,7 @@ function insertFormMessages($errors) {
     }
 }
 
+// Check if telephone number is valid using regex.
 function isValidTelephone($string) {
     $regex = '/((?:\+|00)[17](?: |-)?|(?:\+|00)[1-9]\d{0,2}(?: |-)?|(?:\+|00)1-\d{3}(?: |-)?)?(0\d|([0-9]{3})|[1-9]{0,3})(?:((?: |-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |-)[0-9]{3}(?: |-)[0-9]{4})|([0-9]{7}))/';
     return preg_match($regex, $string);

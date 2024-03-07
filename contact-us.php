@@ -34,7 +34,7 @@ include("inc/header.php");
             <div class="offices_items-wrapper">
                 <div class="offices_items-row">
 
-                    <?php insertOffices($offices) ?>
+                    <?php if (isset($offices)) insertOffices($offices) ?>
 
                 </div>
             </div>
@@ -72,37 +72,37 @@ include("inc/header.php");
                 <div class="contact_form" id="form">
                     <form action="#form" method="POST" id="js-form" class="form" accept-charset="UTF-8">
 
-                        <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { insertFormMessages($errors); } ?>
+                        <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { if (isset($errors)) insertFormMessages($errors); } ?>
 
                         <div class="form_inputs-wrapper">
                             <div class="form_input">
                                 <div class="form_group">
-                                    <label for="name" class="required">Your Name</label>
-                                    <input class="form-textfield" name="name" type="text" value="<?= htmlspecialchars($name ?? "") ?>">
+                                    <label for="contact_name" class="required">Your Name</label>
+                                    <input class="form-textfield" name="name" id="contact_name" type="text" value="<?= htmlspecialchars($name ?? "") ?>">
                                 </div>
                             </div>
                             <div class="form_input">
                                 <div class="form_group">
-                                    <label for="company">Company Name</label>
-                                    <input class="form-textfield" name="company" type="text" value="<?= htmlspecialchars($company ?? "") ?>">
+                                    <label for="contact_company">Company Name</label>
+                                    <input class="form-textfield" name="company" id="contact_company" type="text" value="<?= htmlspecialchars($company ?? "") ?>">
                                 </div>
                             </div>
                             <div class="form_input">
                                     <div class="form_group">
-                                        <label for="email" class="required">Your Email</label>
-                                        <input class="form-textfield" name="email" type="text" value="<?= htmlspecialchars($email ?? "") ?>">
+                                        <label for="contact_email" class="required">Your Email</label>
+                                        <input class="form-textfield" name="email" id="contact_email" type="text" value="<?= htmlspecialchars($email ?? "") ?>">
                                     </div>
                                 </div>
                                 <div class="form_input">
                                     <div class="form_group">
-                                        <label for="telephone" class="required">Your Telephone Number</label>
-                                        <input class="form-textfield" name="telephone" type="text" value="<?= htmlspecialchars($telephone ?? "") ?>">
+                                        <label for="contact_telephone" class="required">Your Telephone Number</label>
+                                        <input class="form-textfield" name="telephone" id="contact_telephone" type="text" value="<?= htmlspecialchars($telephone ?? "") ?>">
                                     </div>
                             </div>
                         </div>
                         <div class="form_group">
-                            <label for="message" class="required">Message</label>
-                            <textarea class="form-textarea" name="message" cols="50" rows="10"><?= htmlspecialchars($message ?? "Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?") ?></textarea>
+                            <label for="contact_message" class="required">Message</label>
+                            <textarea class="form-textarea" name="message" id="contact_message" cols="50" rows="10"><?= htmlspecialchars($message ?? "Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?") ?></textarea>
                         </div>
                         <div class="form_group">
                             <label class="form_marketing">

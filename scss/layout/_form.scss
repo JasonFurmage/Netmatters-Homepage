@@ -44,35 +44,27 @@
 
 .form_text-wrapper {
     margin-bottom: 15.5px;
-
-    a {
-        text-decoration: underline; // Show underline for 'privacy policy' text.
-    }
+    a { text-decoration: underline; } // Show underline for 'privacy policy' text.
 }
 
 .form_recaptcha {
-    font-size: 11px;
-    font-weight: 600;
-    color: $dark-grey;
+    @include text_style(11px, $color: $dark-grey, $font-weight: 600);
     margin: -10px 0px 30px 0px;
 }
 
 .form_button-wrapper {
     @include flex_style($align-items: center, $justify-content: space-between);
 
+    // Style "required field" text and make asterisk (*) red.
     small {
-        font-size: 85%;
-        color: $dark-grey;
-
-        span {
-            color: #a94442;
-        }
+        @include text_style(85%, $color: $dark-grey);
+        span {color: #a94442; }
     }
 }
 
 .form_message {
-    padding: 15px;
-    margin-bottom: 20px;
     border: 1px solid transparent;
     border-radius: 2px;
+    padding: 15px;
+    margin-bottom: 20px;
 }

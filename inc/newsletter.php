@@ -2,25 +2,25 @@
 
 <div class="newsletter">
     <div class="container">
-        <form method="POST" action="#" accept-charset="UTF-8" id="newsletter_form" class="form">
+        <form action="#" method="POST" class="form" accept-charset="UTF-8">
             <h2>Email Newsletter Sign-Up</h2>
             <div class="form_inputs-wrapper">
                 <div class="form_input">
                     <div class="form_group">
-                        <label for="name" class="required">Your Name</label>
-                        <input class="form-textfield" name="name" type="text">
+                        <label for="newsletter_name" class="required">Your Name</label>
+                        <input class="form-textfield" name="name" id="newsletter_name" type="text">
                     </div>
                 </div>
                 <div class="form_input">
                     <div class="form_group">
-                        <label for="email" class="required">Your Email</label>
-                        <input class="form-textfield" name="email" type="text">
+                        <label for="newsletter_email" class="required">Your Email</label>
+                        <input class="form-textfield" name="email" id="newsletter_email" type="text">
                     </div>
                 </div>
             </div>
             <div class="form_group">
                 <label class="form_marketing">
-                    <input type="checkbox" class="form-checkbox">
+                    <input class="form-checkbox" name="marketing" type="checkbox">
                     <span class="form_checkbox-wrapper">
                     </span>
                     <span class="form_text-wrapper">

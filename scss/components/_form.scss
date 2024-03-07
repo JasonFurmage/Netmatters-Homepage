@@ -36,22 +36,29 @@
 }
 
 .form-message-button {
-    @include text_style(21px, $line-height: 1, $font-weight: 700);
+    @include text_style(21px, $line-height: 1, $font-weight: 700); // Adjust size of x.
     opacity: .2;
     border: 0;
     padding: 0;
-    float: right;
+    float: right; // Position on right of message box.
     background: transparent;
     cursor: pointer;
 }
 
-.form-error {
+// Change textfield and textarea border to red when input is invalid.
+.-invalid {
+    border-color: #d64541!important;
+}
+
+// Styling for form error message.
+.-error {
     color: #a94442;
     background-color: #f2dede;
     border-color: #ebccd1 !important;
 }
 
-.form-success {
+// Styling for form success message.
+.-success {
     color: $white;
     background: #2ecc71;
     border-color: #d6e9c6 !important;

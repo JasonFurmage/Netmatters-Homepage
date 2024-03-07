@@ -80,7 +80,7 @@
             <div class="footer-license">
                 <div class="container">
                     <div class="footer-license_wrapper">
-                        &copy; Copyright Netmatters 2024.<br class="xs-only"> All rights reserved.
+                        &copy; Copyright Netmatters 2023.<br class="xs-only"> All rights reserved.
                         <span class=footer-license_sitemap><a href="#" id="sitemap">Sitemap </a></span>
                     </div>
                 </div>
