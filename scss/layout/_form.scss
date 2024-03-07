@@ -1,0 +1,78 @@
+.form {
+    // Style all labels in newsletter.
+    label {
+        @include text_style($font-weight: 600, $color: $dark-grey);
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+}
+
+.form_inputs-wrapper {
+    @include flex_style($flex-wrap: wrap); // Make text fields wrap to new line on smaller screens.
+    margin: 0px -15px;
+}
+
+.form_input {
+    width: 100%;
+    padding: 0px 15px;
+
+    // Put text fields on same line on screens at least 992px wide.
+    @include mq_min(medium) {
+        width: 50%;
+    }
+}
+
+.form_group {
+    margin-bottom: 15px;
+}
+
+.form_marketing {
+    display: flex!important; // Overwrite default style so checkbox and marketing text appear on same line.
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.form_checkbox-wrapper {
+    // Create styled checkbox.
+    display: inline-block;
+    height: 32px;
+    min-width: 32px;
+    border: 3px solid $dark-grey;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+
+.form_text-wrapper {
+    margin-bottom: 15.5px;
+
+    a {
+        text-decoration: underline; // Show underline for 'privacy policy' text.
+    }
+}
+
+.form_recaptcha {
+    font-size: 11px;
+    font-weight: 600;
+    color: $dark-grey;
+    margin: -10px 0px 30px 0px;
+}
+
+.form_button-wrapper {
+    @include flex_style($align-items: center, $justify-content: space-between);
+
+    small {
+        font-size: 85%;
+        color: $dark-grey;
+
+        span {
+            color: #a94442;
+        }
+    }
+}
+
+.form_message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}

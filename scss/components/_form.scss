@@ -1,0 +1,58 @@
+.form-textfield, .form-textarea {
+    @include text_style(14px, $color: #555, $line-height: 1.42857143);
+    display: block;
+    height: 47px;
+    width: 100%;
+    border: 1px solid $grey;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    padding: 5px 15px;
+    @extend %highlight-textfield-on-focus;
+}
+
+.form-textarea {
+    height: 100px;
+    min-height: 100px;
+}
+
+.form-checkbox {
+    position: fixed;
+    opacity: 0; // Hide checkbox.
+
+    // When checked insert custom checkmark in wrapper.
+    &:checked + .form_checkbox-wrapper:before {
+        content: "✓";
+        @include flex_style($align-items: center, $justify-content: center);
+        height: 100%;
+        width: 100%;
+        color: $white;
+        background-color: $footer-bg-color;
+    }
+}
+
+.form-button {
+    @extend %button;
+    @include button_style($white, $dark-grey, $darker-grey);
+}
+
+.form-message-button {
+    @include text_style(21px, $line-height: 1, $font-weight: 700);
+    opacity: .2;
+    border: 0;
+    padding: 0;
+    float: right;
+    background: transparent;
+    cursor: pointer;
+}
+
+.form-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1 !important;
+}
+
+.form-success {
+    color: $white;
+    background: #2ecc71;
+    border-color: #d6e9c6 !important;
+}

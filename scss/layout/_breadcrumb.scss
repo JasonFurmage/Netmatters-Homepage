@@ -1,0 +1,23 @@
+.breadcrumb {
+    box-shadow: 0px 5px 35px rgba(0,0,0,.1);
+    padding: 14px 0px 13px;
+
+    @include mq_max(medium) {
+        border-top: 1px solid $dark-grey;
+    }
+}
+
+.breadcrumb-wrapper {
+    font-size: .8125rem;
+
+    li {
+        display: inline-block;
+        color: $dark-grey;
+        a { font-weight: 800; }
+    }
+
+    li+li:before {
+        content: "/\A0";
+        padding: 0px 5px; 
+    }
+}

@@ -1,0 +1,6 @@
+.office-button {
+    @extend %button;
+    @include button_style($white, $background-color: #926fb1, $hover-color: #7e57a0);
+    font-size: .9em;
+    padding: 5px 30px;
+}

@@ -13,7 +13,8 @@ try {
     $db = new PDO("mysql:host=$dbHost;dbname=$dbName", "$dbUserName", "$dbPassword");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (Exception $e) {
-    echo "Unable to connect to database: " . $e->getMessage();
+    echo "Unable to connect to database:";
+    echo $e->getMessage();
     exit; 
 }
 

@@ -7,6 +7,8 @@ $errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    $noErrors = true;
+
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
     $company = filter_input(INPUT_POST, 'company', FILTER_SANITIZE_STRING);
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
@@ -33,7 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "The message field is required.";
     }
 
-    if (count($errors) === 0 ) {
+    $noErrors = count($errors) === 0;
+
+    if ($noErrors) {
         $sql = 'INSERT INTO enquiries (name, company, email, telephone, message, marketing) VALUES (?, ?, ?, ?, ?, ?)'; 
 
     try {
@@ -53,10 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     }
 
-    if (count($errors) === 0 ) {
-        $name = $company = $email = $telephone = "";
-        $message = "Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?";
-        $marketing = "off";
+    if ($noErrors) {
+        $name = $company = $email = $telephone = $message = $marketing = null;
     }
 }
 
